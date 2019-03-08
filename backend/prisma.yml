@@ -1,0 +1,6 @@
+endpoint: https://us1.prisma.sh/kp-blog/kp-blog/dev
+datamodel: datamodel.graphql
+# SECRET: ${env:PRISMA_SECRET}
+hooks:
+  post-deploy:
+      - graphql get-schema -p prisma

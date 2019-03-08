@@ -1,0 +1,38 @@
+enum Permission {
+    ADMIN
+    USER
+    POSTCREATE
+    POSTUPDATE
+    POSTDELETE
+    PERMISSIONUPDATE
+}
+
+type Tag {
+    id: ID! @unique
+    hash: String! @unique
+    post: [Post!]!
+}
+
+type User {
+    id: ID! @unique
+    name: String!
+    email: String! @unique
+    password: String!
+    resetToken: String
+    resetTokenExpiry: Float
+    permissions: [Permission]
+}
+
+type Post {
+    id: ID! @unique
+    title: String!
+    description: String!
+    content: String
+    image: String
+    images: [String!]!
+    largeImage: String
+    tags: [Tag]!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+    user: User!
+}

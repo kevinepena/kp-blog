@@ -1,0 +1,35 @@
+# import * from './generated/prisma.graphql'
+type SuccessMessage {
+    message: String
+}
+
+type Query {
+    posts(where: PostWhereInput, first: Int, skip: Int, orderBy: PostOrderByInput ): [Post]!
+    post(where: PostWhereUniqueInput!): Post
+    tags(where: TagWhereInput, first: Int, skip: Int, orderBy: PostOrderByInput ): [Tag]!
+    tag(where: TagWhereUniqueInput!): Tag
+    postsConnection(where: PostWhereInput): PostConnection!
+    me: User
+    # users: [User]!
+}
+
+type Mutation {
+    createPost(title: String, description:String, image: String, largeImage: String, content: String, tags: [String!]!): Post!
+    updatePost(id: ID!, title: String, description: String, content: String): Post!
+    deletePost(id: ID!): Post
+    signup(email: String!, password: String!, name: String!): User!
+    signin(email: String!, password: String!): User!
+    signout: SuccessMessage
+    createTag(hash: String): Tag!
+    updateTag(id: ID!): Tag!
+    # requestReset(email: String!): SuccessMessage
+    # resetPassword(resetToken: String!, password: String!, confirmPassword: String!): User!
+    # updatePermissions(permissions: [Permission], userId: ID!): User
+}
+
+type User{
+    id: ID!
+    name: String!
+    email: String!
+    permissions: [Permission!]!
+}
