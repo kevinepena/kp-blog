@@ -80,6 +80,7 @@ const GlobalStyle = createGlobalStyle`
             font-size: 1.5rem;
             line-height: 2;
             font-family: 'radnika_next';
+            outline: none;
             /* background-color: rgba(52,56,56, 1); */
     }
     a {

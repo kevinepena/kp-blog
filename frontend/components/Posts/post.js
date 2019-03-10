@@ -5,6 +5,7 @@ import Title from '../styled/Title';
 import PostStyles from '../styled/PostStyles';
 import DeletePost from './delete';
 import User from '../User';
+import CarouselComp from '../Carousel';
 
 function hasPermission(user, permissionsNeeded) {
     const matchedPermissions = user.permissions.filter(permissionTheyHave =>
@@ -42,9 +43,7 @@ export default class Posts extends Component {
 
 
                     <PostStyles>
-                        {post.image &&
-                            <img src={post.image} alt={post.title} />
-                        }
+                        <CarouselComp images={post.images} />
                         <Title>
                             <Link href={{
                                 pathname: '/post',

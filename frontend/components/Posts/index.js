@@ -13,22 +13,14 @@ const ALL_POSTS_QUERY = gql`
             id
             title
             description
-            image
-            largeImage
+            images
+            largeImages
             tags {
                 id
                 hash
             }
         }
     }
-`;
-
-
-const Grid = styled.div`
-    margin-top: 130px;
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 250px));
-    grid-template-columns: repeat(3, 1fr);
 `;
 
 const Center = styled.div`
@@ -43,6 +35,12 @@ const PostsList = styled.div`
     grid-gap: 60px;
     max-width: ${props => props.theme.maxWidth};
     margin: 0 auto;
+
+    @media(max-width: 500px) {
+    grid-template-columns: 1fr;
+    margin: 15px auto 0 auto;
+
+    }
 `;
 
 class Posts extends Component {
@@ -50,19 +48,19 @@ class Posts extends Component {
         return (
 
             <Center>
-                    <Query
-                        query={ALL_POSTS_QUERY}
-                        variables={{
-                            skip: this.props.page * perPage - perPage,
-                        }}>
-                        {({ loading, error, data }) => {
-                            if (loading) return "Loading...";
-                            if (error) return `Error: ${error.message}`;
-                            return <PostsList>
-                                {data.posts.map((post, i) =><div className={i % 3}><Post post={post} key={post.id} /></div>)}
-                            </PostsList>
-                        }}
-                    </Query>
+                <Query
+                    query={ALL_POSTS_QUERY}
+                    variables={{
+                        skip: this.props.page * perPage - perPage,
+                    }}>
+                    {({ loading, error, data }) => {
+                        if (loading) return "Loading...";
+                        if (error) return `Error: ${error.message}`;
+                        return <PostsList>
+                            {data.posts.map((post, i) => <div key={i} className={i % 3}><Post post={post} key={post.id} /></div>)}
+                        </PostsList>
+                    }}
+                </Query>
                 <Pagination page={this.props.page} />
             </Center>
         )

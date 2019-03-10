@@ -16,7 +16,7 @@ function hasPermission(user, permissionsNeeded) {
 }
 
 const NavStyles = styled.ul`
-z-index: 999;
+z-index: 9;
 background-color: #2c3e50;
 /* background-color: linear-gradient(to right, #2c3e50, #4E6E9D); */
 /* background: linear-gradient(to right, #2c3e50, #4E6E9D) url('../../static/__7.jpg'); */
@@ -24,16 +24,10 @@ background-color: #2c3e50;
 background-image: url('../../static/__7.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
-/* background-position: fixed; */
 background-size: cover;
-/* background */
-
-${props => props.scroll && `
-position: fixed;
-top: 0;
-border-bottom: 5px solid #494e52;
-`}
-
+width: 100%;
+justify-content: center;
+font-size: 1.5rem;
 margin: 0;
 padding: 0;
 display: flex;
@@ -57,10 +51,6 @@ button {
   background: none;
   border: 0;
   cursor: pointer;
-  @media (max-width: 700px) {
-    font-size: 10px;
-    padding: 0 10px;
-  }
   &:before {
     height: 2px;
     background: ${props => props.theme.blue};
@@ -98,11 +88,8 @@ button {
   }
   }
 }
-@media (max-width: 1300px) {
-  width: 100%;
-  justify-content: center;
-  font-size: 1.5rem;
-}
+
+
 @media (max-width: 700px) {
   flex-direction: column;
   align-content: center;
@@ -110,8 +97,23 @@ button {
   /* position: relative; */
   position: absolute;
   top: -300px;
-
+  font-size: 10px;
+  padding: 0 10px;
+  box-shadow: 1px 1px 1px rgba(0,0,0, 0.4);
 }
+
+@media(max-width: 900px) {
+  font-size: 1.3rem;
+}
+@media(max-width: 1500px) {
+  font-size: 1.5rem;
+  ${props => props.scroll && `
+position: fixed;
+top: 0;
+border-bottom: 5px solid #494e52;
+`}
+}
+
 `;
 
 export default class Nav extends Component {
@@ -122,7 +124,7 @@ export default class Nav extends Component {
     return (
       <User>
         {({ data: { me } }) => (
-          <NavStyles scroll={this.props.scroll}>
+          <NavStyles onClick={this.props.openMobile} scroll={this.props.scroll} mobile={this.props.mobile} className={`${this.props.mobile ? 'mobile' : ''} ${this.props.open ? 'open' : ''}`}>
             <Link href='/work'>
               <a>
                 Work

@@ -3,15 +3,11 @@ import React, { Component } from 'react';
 
 const BetterButton = styled.div`
 .menu {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 50px;
   position: relative;
   margin: auto;
-  padding-top: 20px;
-  border: 5px solid transparent;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
+  padding-top: 15px;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -20,7 +16,7 @@ const BetterButton = styled.div`
 }
     .bar {
   height: 5px;
-  width: 70px;
+  width: 35px;
   display: block;
   margin: 10px auto;
   position: relative;
@@ -33,13 +29,14 @@ const BetterButton = styled.div`
   -o-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-bottom: 2px solid #494e52;
 }
 
  .bar {
   position: absolute;
 }
  .bar:nth-of-type(1) {
-  top: 15px;
+  top: 20px;
   -moz-transition: top 0.3s ease 0.3s, -moz-transform 0.3s ease-out 0.1s;
   -o-transition: top 0.3s ease 0.3s, -o-transform 0.3s ease-out 0.1s;
   -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
@@ -61,7 +58,7 @@ const BetterButton = styled.div`
   animation: fade 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
 }
 .bar:nth-of-type(3) {
-  top: 45px;
+  top: 40px;
   -moz-transition: top 0.3s ease 0.3s, -moz-transform 0.3s ease-out 0.1s;
   -o-transition: top 0.3s ease 0.3s, -o-transform 0.3s ease-out 0.1s;
   -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
@@ -106,23 +103,9 @@ ${props => props.pushed ? `
 
 class Button extends Component {
 
-    state = {
-        toggeled: false
-    }
-
-    switch = () => {
-        this.setState({ toggeled: !this.state.toggeled })
-    }
     render() {
         return (
-            // <HamButton onClick={this.switch} pushed={this.state.toggeled}>
-            //     <div className="toggle-icon" >
-            //         <span className="bar"></span>
-            //         <span className="bar"></span>
-            //         <span className="bar"></span>
-            //     </div>
-            // </HamButton>
-            <BetterButton pushed={this.state.toggeled} onClick={this.switch}>
+            <BetterButton pushed={this.props.open}>
                 <div className="menu">
                     <div className="bar"></div>
                     <div className="bar"></div>

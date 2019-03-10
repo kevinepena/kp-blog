@@ -14,7 +14,7 @@ type Query {
 }
 
 type Mutation {
-    createPost(title: String, description:String, image: String, largeImage: String, content: String, tags: [String!]!): Post!
+    createPost(title: String, description:String, images: [String]!, largeImages: [String]!, content: String, tags: [String!]!): Post!
     updatePost(id: ID!, title: String, description: String, content: String): Post!
     deletePost(id: ID!): Post
     signup(email: String!, password: String!, name: String!): User!

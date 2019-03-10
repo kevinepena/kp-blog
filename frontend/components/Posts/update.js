@@ -11,7 +11,8 @@ query SINGLE_POST_QUERY($id: ID!) {
     post(where: { id: $id}) {
         id
         title
-        image
+        images
+        content
         description
         tags {
             id
@@ -26,14 +27,17 @@ const UPDATE_POST_MUTATION = gql`
         $id: ID!
         $title: String
         $description: String
+        $content: String
     ){ updatePost(
             id: $id
             title: $title
             description: $description
+            content: $content
         ){
             id
             title
             description
+            content
             tags {
                 id
             }
@@ -80,7 +84,7 @@ class UpdatePost extends Component {
                                     <Error error={error} />
                                     <fieldset disabled={loading} aria-busy={loading}>
 
-                                        <img src={data.data.post.image} alt={data.data.post.title} />
+                                        {/* <img src={data.data.post.image} alt={data.data.post.title} /> */}
                                         <label htmlFor="title">
                                             Title
                     <input
@@ -100,6 +104,16 @@ class UpdatePost extends Component {
                                                 name="description"
                                                 placeholder="Enter a description"
                                                 defaultValue={data.data.post.description}
+                                                onChange={this.handleChange}
+                                                required />
+                                        </label>
+                                        <label htmlFor="content">
+                                        Content
+                    <textarea
+                                                id="content"
+                                                name="content"
+                                                placeholder="Content"
+                                                defaultValue={data.data.post.content}
                                                 onChange={this.handleChange}
                                                 required />
                                         </label>

@@ -59,8 +59,10 @@ const Mutation = {
     async createPost(parent, args, ctx, info) {
 
         const argsCopy = { ...args };
-
         delete argsCopy.tags;
+        delete argsCopy.images;
+        delete argsCopy.largeImages;
+        
         // TODO: Check if they are logged in
         if (!ctx.request.userId) {
             throw new Error('Must be logged in!')
@@ -74,6 +76,8 @@ const Mutation = {
                         id: ctx.request.userId
                     }
                 },
+                images: { set: [...args.images] },
+                largeImages: { set: [...args.images]},
                 ...argsCopy,
             }
         }, info);
@@ -121,7 +125,7 @@ const Mutation = {
         const updates = { ...args };
         //remove the ID from the updates
         delete updates.id;
-        
+
         // run the update method
         const update = ctx.db.mutation.updatePost({
             data: updates,

@@ -93,6 +93,149 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Carousel/index.js":
+/*!**************************************!*\
+  !*** ./components/Carousel/index.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap/Carousel */ "react-bootstrap/Carousel");
+/* harmony import */ var react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_bootstrap_CarouselItem__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap/CarouselItem */ "react-bootstrap/CarouselItem");
+/* harmony import */ var react_bootstrap_CarouselItem__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_CarouselItem__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_11__);
+
+
+
+
+
+
+
+
+var _jsxFileName = "/Users/kevinpena/Documents/computerScience/self/kp-blog/frontend/components/Carousel/index.js";
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n\n.carousel {\n  position: relative;\n}\n\n.carousel-indicators {\n    position: absolute;\n    right: 0;\n    bottom: 10px;\n    left: 0;\n    z-index: 2;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-pack: center;\n    justify-content: center;\n    padding-left: 0;\n    margin-right: 15%;\n    margin-left: 15%;\n    list-style: none;\n\n    li {\n        position: relative;\n    -ms-flex: 0 1 auto;\n    flex: 0 1 auto;\n    width: 30px;\n    height: 3px;\n    margin-right: 3px;\n    margin-left: 3px;\n    text-indent: -999px;\n    cursor: pointer;\n    background-color: rgba(255,255,255,.5);\n    }\n\n        .active {\n    background-color: #fff;\n    }\n\n\n}\n\n.carousel-inner {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n}\n\n.carousel-item {\n  position: relative;\n  display: none;\n  align-items: center;\n  width: 100%;\n  backface-visibility: hidden;\n  perspective: 1000px;\n}\n\n.carousel-item.active,\n.carousel-item-next,\n.carousel-item-prev {\n  display: block;\n}\n\n.carousel-item-next,\n.carousel-item-prev {\n  position: absolute;\n  top: 0;\n}\n\n.carousel-item-next.carousel-item-left,\n.carousel-item-prev.carousel-item-right {\n  transform: translateX(0);\n\n  @supports (transform-style: preserve-3d) {\n    transform: translate3d(0, 0, 0);\n  }\n}\n\n.carousel-item-next,\n.active.carousel-item-right {\n  transform: translateX(100%);\n\n  @supports (transform-style: preserve-3d) {\n    transform: translate3d(100%, 0, 0);\n  }\n}\n\n.carousel-item-prev,\n.active.carousel-item-left {\n  transform: translateX(-100%);\n\n  @supports (transform-style: preserve-3d) {\n    transform: translate3d(-100%, 0, 0);\n  }\n}\n\n.carousel-control-prev {\n    left: 0;\n}\n.carousel-control-next, .carousel-control-prev {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n    align-items: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    width: 15%;\n    color: #fff;\n    text-align: center;\n    opacity: .5;\n}\n\n.carousel-control-next {\n    right: 0;\n}\n\n\n.carousel-control-prev-icon {\n    background-image: url('../static/left.svg') !important;\n    transform: scale(2);\n}\n.carousel-control-next-icon {\n    background-image: url('../static/right.svg') !important;\n    transform: scale(2);\n}\n\n.sr-only {\n    border: 0;\n    clip: rect(0,0,0,0);\n    height: 1px;\n    margin: -1px;\n    overflow: hidden;\n    padding: 0;\n    position: absolute;\n    width: 1px;\n}\n\n.carousel-control-next-icon, .carousel-control-prev-icon {\n    display: inline-block;\n    width: 20px;\n    height: 20px;\n    background: transparent no-repeat center center;\n    background-size: 100% 100%;\n}\n\n.carousel-fade {\n  .carousel-item {\n    opacity: 0;\n    transition-duration: .6s;\n    transition-property: opacity;\n  }\n\n  .carousel-item.active,\n  .carousel-item-next.carousel-item-left,\n  .carousel-item-prev.carousel-item-right {\n    opacity: 1;\n  }\n\n  .active.carousel-item-left,\n  .active.carousel-item-right {\n    opacity: 0;\n  }\n\n  .carousel-item-next,\n  .carousel-item-prev,\n  .carousel-item.active,\n  .active.carousel-item-left,\n  .active.carousel-item-prev {\n    transform: translateX(0);\n\n    @supports (transform-style: preserve-3d) {\n      transform: translate3d(0, 0, 0);\n    }\n  }\n}\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+var Styled = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div(_templateObject());
+
+var CarouselComp =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(CarouselComp, _Component);
+
+  function CarouselComp(props, context) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CarouselComp);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CarouselComp).call(this, props, context));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+      index: 0,
+      direction: null,
+      images: []
+    });
+
+    _this.handleSelect = _this.handleSelect.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CarouselComp, [{
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps() {}
+  }, {
+    key: "handleSelect",
+    value: function handleSelect(selectedIndex, e) {
+      this.setState({
+        index: selectedIndex,
+        direction: e.direction
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          index = _this$state.index,
+          direction = _this$state.direction;
+      var images = this.props.images;
+      var empty = [];
+
+      if (images.length > 0) {
+        for (var i = 0; i < images.length; i++) {
+          empty.push(react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_bootstrap_CarouselItem__WEBPACK_IMPORTED_MODULE_10___default.a, {
+            key: i,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 221
+            },
+            __self: this
+          }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+            className: "d-block w-100",
+            src: images[i],
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 222
+            },
+            __self: this
+          })));
+        }
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Styled, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 232
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_9___default.a, {
+        activeIndex: index,
+        direction: direction,
+        onSelect: this.handleSelect,
+        pauseOnHover: true,
+        fade: true,
+        wrap: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 233
+        },
+        __self: this
+      }, empty[0] && empty));
+    }
+  }]);
+
+  return CarouselComp;
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (CarouselComp);
+
+/***/ }),
+
 /***/ "./components/Hero/index.js":
 /*!**********************************!*\
   !*** ./components/Hero/index.js ***!
@@ -528,18 +671,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/kevinpena/Documents/computerScience/self/kp-blog/frontend/components/Posts/index.js";
 
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    margin-top: 130px;\n    grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));\n    grid-template-columns: repeat(3, 1fr);\n    display: grid;\n    grid-gap: 60px;\n    max-width: ", ";\n    margin: 0 auto;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    text-align: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    margin-top: 130px;\n    grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));\n    grid-template-columns: repeat(3, 1fr);\n    display: grid;\n    grid-gap: 60px;\n    max-width: ", ";\n    margin: 0 auto;\n\n    @media(max-width: 500px) {\n    grid-template-columns: 1fr;\n    margin: 15px auto 0 auto;\n\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -549,7 +682,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    margin-top: 130px;\n    display: grid;\n    grid-template-rows: repeat(auto-fit, minmax(150px, 250px));\n    grid-template-columns: repeat(3, 1fr);\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    text-align: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -559,7 +692,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    query ALL_POSTS_QUERY($skip: Int = 0, $first: Int = ", ") {\n        posts(first: $first, skip: $skip, orderBy: createdAt_DESC) {\n            id\n            title\n            description\n            image\n            largeImage\n            tags {\n                id\n                hash\n            }\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    query ALL_POSTS_QUERY($skip: Int = 0, $first: Int = ", ") {\n        posts(first: $first, skip: $skip, orderBy: createdAt_DESC) {\n            id\n            title\n            description\n            images\n            largeImages\n            tags {\n                id\n                hash\n            }\n        }\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -576,9 +709,8 @@ function _templateObject() {
 
 
 var ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_9___default()(_templateObject(), _config_js__WEBPACK_IMPORTED_MODULE_12__["perPage"]);
-var Grid = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject2());
-var Center = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject3());
-var PostsList = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject4(), function (props) {
+var Center = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject2());
+var PostsList = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject3(), function (props) {
   return props.theme.maxWidth;
 });
 
@@ -599,7 +731,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Center, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 50
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_8__["Query"], {
@@ -609,7 +741,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 51
         },
         __self: this
       }, function (_ref) {
@@ -621,15 +753,16 @@ function (_Component) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(PostsList, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 59
           },
           __self: this
         }, data.posts.map(function (post, i) {
           return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+            key: i,
             className: i % 3,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 60
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_post__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -637,7 +770,7 @@ function (_Component) {
             key: post.id,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 60
             },
             __self: this
           }));
@@ -646,7 +779,7 @@ function (_Component) {
         page: this.props.page,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 64
         },
         __self: this
       }));
@@ -687,6 +820,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styled_PostStyles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styled/PostStyles */ "./components/styled/PostStyles.js");
 /* harmony import */ var _delete__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./delete */ "./components/Posts/delete.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../User */ "./components/User/index.js");
+/* harmony import */ var _Carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../Carousel */ "./components/Carousel/index.js");
 
 
 
@@ -694,6 +828,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/kevinpena/Documents/computerScience/self/kp-blog/frontend/components/Posts/post.js";
+
 
 
 
@@ -742,13 +877,13 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 36
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 36
           },
           __self: this
         }, "#", tag.hash)));
@@ -756,7 +891,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 41
         },
         __self: this
       }, function (_ref) {
@@ -764,12 +899,11 @@ function (_Component) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_styled_PostStyles__WEBPACK_IMPORTED_MODULE_10__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 45
           },
           __self: this
-        }, post.image && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-          src: post.image,
-          alt: post.title,
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Carousel__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          images: post.images,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 46
@@ -778,7 +912,7 @@ function (_Component) {
         }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_styled_Title__WEBPACK_IMPORTED_MODULE_9__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 47
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -790,33 +924,33 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49
+            lineNumber: 48
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 52
           },
           __self: this
         }, post.title))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 55
           },
           __self: this
         }, post.description), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "tags",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 56
           },
           __self: this
         }, arr[0] ? arr : 'Loading...'), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "buttonList",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 61
           },
           __self: this
         }, me && hasPermission(me, ['ADMIN']) && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -828,32 +962,32 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 64
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 68
           },
           __self: this
         }, "\u270F\uFE0F")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_delete__WEBPACK_IMPORTED_MODULE_11__["default"], {
           id: post.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 71
+            lineNumber: 70
           },
           __self: this
         }, "\u274C")), me && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 77
           },
           __self: this
         }, "\u2764\uFE0F"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 78
           },
           __self: this
         }, "Comment"))));
@@ -951,7 +1085,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  display: grid;\n  grid-template-columns: repeat(4, auto);\n  align-items: stretch;\n  justify-content: center;\n  align-content: center;\n  margin: 2rem 0;\n  border: 1px solid ", ";\n  border-radius: 10px;\n  & > * {\n    margin: 0;\n    padding: 15px 30px;\n    border-right: 1px solid ", ";\n    &:last-child {\n      border-right: 0;\n    }\n  }\n  a[aria-disabled='true'] {\n    color: grey;\n    pointer-events: none;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  display: grid;\n  grid-template-columns: repeat(4, auto);\n  align-items: stretch;\n  justify-content: center;\n  align-content: center;\n  margin: 2rem 0;\n  border: 1px solid ", ";\n  border-radius: 10px;\n  & > * {\n    margin: 0;\n    padding: 15px 30px;\n    border-right: 1px solid ", ";\n    &:last-child {\n      border-right: 0;\n    }\n  }\n  a[aria-disabled='true'] {\n    color: grey;\n    pointer-events: none;\n  }\n\n  @media(max-width: 400px) {\n    a {font-size: 10px;}\n    & > * {font-size: 10px;}\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2734,6 +2868,28 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-apollo");
+
+/***/ }),
+
+/***/ "react-bootstrap/Carousel":
+/*!*******************************************!*\
+  !*** external "react-bootstrap/Carousel" ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-bootstrap/Carousel");
+
+/***/ }),
+
+/***/ "react-bootstrap/CarouselItem":
+/*!***********************************************!*\
+  !*** external "react-bootstrap/CarouselItem" ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-bootstrap/CarouselItem");
 
 /***/ }),
 

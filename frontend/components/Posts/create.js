@@ -10,16 +10,18 @@ const CREATE_ITEM_MUTATION = gql`
     mutation CREATE_ITEM_MUTATION(
         $title: String!
         $description: String!
-        $images: String
-        $largeImage: String
+        $images: [String]!
+        $largeImages: [String]!
         $tags: [String!]!
+        $content: String
     ) {
         createPost(
             title: $title
             description: $description
             images: $images
-            largeImage: $largeImage
+            largeImages: $largeImages
             tags: $tags
+            content: $content
         ) {
             id
         }
@@ -31,8 +33,8 @@ class CreateItem extends Component {
     state = {
         title: '',
         description: '',
-        images: '',
-        largeImage: '',
+        images: [],
+        largeImages: [],
         content: '',
         tags: []
     }
@@ -66,7 +68,7 @@ class CreateItem extends Component {
             const fileJ = await res.json();
             this.setState({
                 images: [...this.state.images, fileJ.secure_url],
-                largeImage: [...this.state.largeImage, fileJ.eager[0].secure_url]
+                largeImages: [...this.state.largeImages, fileJ.eager[0].secure_url]
             })
         })
     }
@@ -91,16 +93,18 @@ class CreateItem extends Component {
                         words = await words.slice();
                         words = await words.map(word => word.toLowerCase());
                         words = await words.map(word => word.trim());
+                        // console.log(this.state)
                         const res = await createPost({
                             variables: {
                                 title: this.state.title,
                                 description: this.state.description,
                                 images: this.state.images,
-                                largeImage: this.state.largeImage,
+                                largeImages: this.state.largeImages,
                                 content: this.state.content,
                                 tags: words
                             }
                         });
+
                         Router.push({
                             pathname: '/post',
                             query: { id: res.data.createPost.id }

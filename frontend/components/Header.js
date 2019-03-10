@@ -1,15 +1,11 @@
 import react, { Component } from 'react';
 import Link from 'next/link';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import Nav from './Nav';
 import KPLogo from './styled/kpLogo';
-
-// import Cart from './Cart';
-// import Search from './Search';
-
+import Button from './styled/hamburgerButton';
 Router.onRouteChangeStart = () => {
     NProgress.start();
     // console.log('OnRouterChangeStart')
@@ -26,96 +22,114 @@ Router.onRouteChangeError = () => {
 };
 
 const StyledHeader = styled.header`
-    /* background-image: url("../static/health1.jpg"); */
-    /* background-attachment: fixed; */
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    .bar {
+
+    .navbtn {
+        display: none;
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    > .bar {
+        
         border-bottom: 5px solid #494e52 ;
         display: grid;
         grid-template-rows: auto 1fr;
         justify-content:  space-between;
-
         align-items: stretch;
         background-color: ${props => props.theme.offWhite};
-        @media(max-width: 1300px) {
-            grid-template-columns: 1fr;
-            justify-content: center;
-            transform: translateX()
-        }
-        @media(min-width: 1300px) {
-            grid-template-columns: 1fr;
-            justify-content: center;
-            ul {
-                width: 100%;
+        grid-template-columns: 1fr;
+        justify-content: center;
+
+        @media(max-width: 700px) {
+            grid-template-columns: repeat(2, 1fr);
+            > div:nth-of-type(1) {
+                justify-content: left;
+                margin: 0 0 0 5px;
+            }   
+            .navbtn {
+                justify-self: right;
+                display: block;
+                margin: 0px;
+                z-index: 9;
             }
+            ul {
+            transform: translateY(-105%);
+            position: absolute;
+            top: 0;
+            transition: all .5s;
+            height: 100vh;
+        a, button {
+            position: relative;
+            text-align: center;
+            /* background-color: rgba(220, 220, 220, .6); */
+            text-align: center;
         }
+        }
+
+
+}
+.open {
+    transform: translateY(0%);
+    height: 100vh;
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+    z-index: 8;
+    overflow: hidden;
+}
 
     }
 
     ${props => props.scroll && `
-    padding: 0 0 53px 0;
-    `}
-            @media(max-width: 700px) {
-                ${props => props.scroll && `
-    padding: 0;
-    `}
-            /* ${props => props.scroll && `
-            position: fixed;
-            transition: all .3s ease-in-out;
-            top: 0;
-            width: 100%;
-`} */
+        padding: 0 0 53px 0;
+        `}
+    @media(max-width: 700px) {
+            ${props => props.scroll && `
+            padding: 0;
+        `}
+
+ul {
+            display: grid;
+            text-shadow: 1px 1px 1px rgba(0,0,0,.9);
         }
+
+        }
+    
 `;
 
-
-
-const Svg = styled.svg`
-    position: absolute;
-    top: 541px;
-    width: 100%;
-    height: 11vw;
-  /* set height to pixels if you want angle to change with screen width */
-`;
-
-const AnimationStyles = styled.div`
-    .count {
-        position: relative;
-        transition:  0.4s;
-        opacity: 1;
-    }
-    /* initial state of enter dot will be flipped on its back */
-    .count-enter {
-        opacity: 0;
-    }
-    .count-enter-active {
-        opacity: 0;
-    }
-    .count-exit {
-        opacity: 0;
-    }
-    .count-exit-active {
-        opacity: 0;
-    }
-`;
 
 
 
 
 class Header extends Component {
     state = {
-        scroll: false
+        scroll: false,
+        mobile: false,
+        open: false
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.scroll);
+        window.addEventListener('resize', this.resize);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.scroll)
+        window.removeEventListener('scroll', this.scroll);
+        window.addEventListener('resize', this.resize);
+    }
+
+    resize = (e) => {
+        if (e.path[0].screen.availWidth < 700) {
+            this.setState({ mobile: true })
+        } else {
+            this.setState({ mobile: false })
+        }
     }
 
     scroll = (e) => {
@@ -124,6 +138,10 @@ class Header extends Component {
         } else {
             this.setState({ scroll: false })
         }
+    }
+
+    openMobile = () => {
+        this.setState({open: !this.state.open})
     }
     render() {
         return (
@@ -134,14 +152,21 @@ class Header extends Component {
             //             className="count"
             //             classNames="count"
             //             timeout={{ enter: 400, exit: 400 }}>
-                        <StyledHeader className="fadein" scroll={this.state.scroll}>
-                            <div className='bar'>
-                                <Link href="/">
-                                    <KPLogo scroll={this.state.scroll} />
-                                </Link>
-                                <Nav scroll={this.state.scroll} />
-                            </div>
-                        </StyledHeader>
+            <StyledHeader className="fadein" scroll={this.state.scroll} >
+                <div className='bar'>
+                    <Link href="/">
+                        <KPLogo scroll={this.state.scroll} />
+                    </Link>
+                {/* {this.state.mobile && <div className="navbtn"><button onClick={this.openMobile}>=</button></div>} */}
+                    <div onClick={this.openMobile} className="navbtn"><Button open={this.state.open}>=</Button></div>
+                    <Nav 
+                    openMobile={this.openMobile} 
+                    open={this.state.open} 
+                    mobile={this.state.mobile} 
+                    scroll={this.state.scroll} />
+                </div>
+
+            </StyledHeader>
             //         </CSSTransition>
             //     </TransitionGroup>
             // </AnimationStyles> 

@@ -28,9 +28,8 @@ type Post {
     title: String!
     description: String!
     content: String
-    image: String
-    images: [String!]!
-    largeImage: String
+    images: [String]!
+    largeImages: [String]!
     tags: [Tag]!
     createdAt: DateTime!
     updatedAt: DateTime!
