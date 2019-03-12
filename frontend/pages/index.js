@@ -79,20 +79,21 @@ const Skew = styled.div`
 
     div > div:nth-of-type(3):hover {
         transform: skewY(15deg) skewX(0deg) scale(.66);
-        background-image: url("../static/us.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189536/kpblog/mgal9lzl5rolqfokz6xe.jpg");
         background-position: center;
     }
 
     div > div:nth-of-type(2):hover {
         transform: skewY(15deg) skewX(0deg) scale(.77);
-        background-image: url("../static/dogs.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189513/kpblog/eibbi1speacak0sxrunx.jpg");
         background-position: 0;
     }
+
 
     @media (min-width: 500) {
         div > div:nth-of-type(1):hover {
         transform: skewY(15deg) skewX(0deg) rotateY(-180deg)  scale(.66);
-        background-image: url("../static/me.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg");
         background-position: -210px;
     }
     }
@@ -100,7 +101,7 @@ const Skew = styled.div`
     @media all and (min-width: 500px) and (max-width: 900px) {
         div > div:nth-of-type(2):hover {
         transform: skewY(15deg) skewX(0deg) scale(.66);
-        background-image: url("../static/dogs.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189513/kpblog/eibbi1speacak0sxrunx.jpg");
         background-position: -59px 0px;
     }
     }
@@ -108,7 +109,7 @@ const Skew = styled.div`
     @media(max-width: 500px) {
         div > div:nth-of-type(1) {
         transform: skewY(15deg) skewX(0deg) rotateY(-180deg)  scale(.6);
-        background-image: url("../static/me.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg");
         background-position: center;
     }
     }
@@ -117,10 +118,10 @@ const Skew = styled.div`
 
 const Home = (props) => (
     <div style={{ paddingBottom: '50px' }}>
-        <Follow>
+        <Follow className="fadein">
             Follow me
             </Follow>
-        <Journey>
+        <Journey className="fadein">
             <span>
                 On
                 </span>
@@ -128,10 +129,11 @@ const Home = (props) => (
             my journey
             </Journey>
         <div style={{ paddingTop: '50px', overflow: 'hidden', minHeight: '720px' }}>
-            <Skew>
+            <Skew className="fadein">
                 <Img />
             </Skew>
         </div>
+
         <Posts page={parseFloat(props.query.page) || 1} />
 
     </div>

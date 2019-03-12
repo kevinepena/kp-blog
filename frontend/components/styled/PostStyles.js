@@ -36,6 +36,7 @@ const Item = styled.div`
     }
   }
   .tags {
+    margin: 10px auto;
     a {
       padding: 5px;
     }

@@ -21,7 +21,7 @@ background-color: #2c3e50;
 /* background-color: linear-gradient(to right, #2c3e50, #4E6E9D); */
 /* background: linear-gradient(to right, #2c3e50, #4E6E9D) url('../../static/__7.jpg'); */
 /* background-color: ${props => props.scroll && `rgba(20,20,20,.4)`}; */
-background-image: url('../../static/__7.jpg');
+background-image: url('https://res.cloudinary.com/kevinpena/image/upload/v1552189534/kpblog/nzklhp9svft52jcqeoii.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
@@ -124,28 +124,22 @@ export default class Nav extends Component {
     return (
       <User>
         {({ data: { me } }) => (
-          <NavStyles onClick={this.props.openMobile} scroll={this.props.scroll} mobile={this.props.mobile} className={`${this.props.mobile ? 'mobile' : ''} ${this.props.open ? 'open' : ''}`}>
-            <Link href='/work'>
-              <a>
-                Work
-          </a>
+          <NavStyles  
+          scroll={this.props.scroll} 
+          mobile={this.props.mobile} 
+          className={`${this.props.mobile && 'mobile'} ${this.props.open && 'open'}`}>
+            <Link href={{ pathname: '/tag', query: { hash: 'work' } }}>
+            <a>Work</a>
             </Link>
-            <Link href='/lifestyle'>
-              <a>
-                Lifestyle
-          </a>
+            <Link href={{ pathname: '/tag', query: { hash: 'lifestyle' } }}>
+            <a>Lifestyle</a>
             </Link>
-            <Link href='/travel'>
-              <a>
-                Travel
-          </a>
+            <Link href={{ pathname: '/tag', query: { hash: 'travel' } }}>
+            <a>Travel</a>
             </Link>
-            <Link href='/family'>
-              <a>
-                Family
-          </a>
+            <Link href={{ pathname: '/tag', query: { hash: 'family' } }}>
+            <a>Family</a>
             </Link>
-
 
             {me && (
               <>

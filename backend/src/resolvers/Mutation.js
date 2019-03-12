@@ -36,7 +36,6 @@ const Mutation = {
     },
     async signin(parent, { email, password }, ctx, info) {
         // check if there is user with email
-        console.log(email, password)
         const user = await ctx.db.query.user({ where: { email: email } });
         if (!user) {
             throw new Error(`Invalid email`)
@@ -62,7 +61,7 @@ const Mutation = {
         delete argsCopy.tags;
         delete argsCopy.images;
         delete argsCopy.largeImages;
-        
+
         // TODO: Check if they are logged in
         if (!ctx.request.userId) {
             throw new Error('Must be logged in!')
@@ -77,7 +76,7 @@ const Mutation = {
                     }
                 },
                 images: { set: [...args.images] },
-                largeImages: { set: [...args.images]},
+                largeImages: { set: [...args.images] },
                 ...argsCopy,
             }
         }, info);
@@ -153,6 +152,92 @@ const Mutation = {
         }
         // 3. Delete it
         return ctx.db.mutation.deletePost({ where }, info);
+    },
+    async requestReset(parent, args, ctx, info) {
+        // check user
+        const user = await ctx.db.query.user({ where: { email: args.email } });
+        if (!user) {
+            throw new Error('No user found for email')
+        }
+        // set tkn and expiry on user
+        const resetToken = (await promisify(randomBytes)(20)).toString('hex');
+        const resetTokenExpiry = Date.now() + 3600000; // 1 hr
+        const res = await ctx.db.mutation.updateUser({
+            where: { email: args.email },
+            data: { resetToken, resetTokenExpiry }
+        });
+        // email them reset token
+        const mailRes = await transport.sendMail({
+            from: 'wes@wesbos.com',
+            to: user.email,
+            subject: 'Your Password Reset Token',
+            html: makeNiceEmail(`Your Password Reset Token is here!
+            \n\n
+            <a href="${process.env.FRONTEND_URL}/reset?resetToken=${resetToken}">Click Here To Reset!</a>`),
+        });
+        return { message: '✈️' };
+    },
+    async resetPassword(parent, args, ctx, info) {
+        // check if they match
+        if (args.password !== args.confirmPassword) {
+            throw new Error("Passwords don't match");
+        }
+        // check if tkn is legit
+
+        // check if it's expired
+        const [user] = await ctx.db.query.users({
+            where: {
+                resetToken: args.resetToken,
+                resetTokenExpiry_gte: Date.now() - 3600000
+            }
+        });
+        if (!user) {
+            throw new Error('Token is invalid')
+        }
+        // hash new password
+        const password = await bcrypt.hash(args.password, 10);
+        // save new password to user and remoe all resetToken fields
+        const updatedUser = await ctx.db.mutation.updateUser({
+            where: { email: user.email },
+            data: {
+                password: password,
+                resetToken: null,
+                resetTokenExpiry: null
+            }
+        });
+        // generate & set jwt
+        const token = jwt.sign({ userId: updatedUser.id }, process.env.APP_SECRET);
+        ctx.response.cookie('token', token, {
+            httpOnly: true,
+            maxAge: 1000 * 60 * 60 * 24 * 365
+        });
+        // return user
+        return updatedUser;
+    },
+    async updatePermissions(parent, args, ctx, info) {
+        // check if they are logged in
+        if (!ctx.request.userId) {
+            throw new Error('Must be logged in!')
+        }
+        // query the user
+        const currentUser = await ctx.db.query.user({
+            where: {
+                id: ctx.request.userId,
+            }
+        }, info);
+        // check if they have permissions
+        hasPermission(currentUser, ['ADMIN', 'PERMISSIONUPDATE']);
+        // update permissions
+        return ctx.db.mutation.updateUser({
+            data: {
+                permissions: {
+                    set: args.permissions,
+                }
+            },
+            where: {
+                id: args.userId
+            },
+        }, info)
     },
 }
 

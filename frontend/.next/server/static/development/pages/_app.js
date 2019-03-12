@@ -682,7 +682,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/kevinpena/Documents/computerScience/self/kp-blog/frontend/components/Nav/index.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\nz-index: 9;\nbackground-color: #2c3e50;\n/* background-color: linear-gradient(to right, #2c3e50, #4E6E9D); */\n/* background: linear-gradient(to right, #2c3e50, #4E6E9D) url('../../static/__7.jpg'); */\n/* background-color: ", "; */\nbackground-image: url('../../static/__7.jpg');\nbackground-repeat: no-repeat;\nbackground-attachment: fixed;\nbackground-size: cover;\nwidth: 100%;\njustify-content: center;\nfont-size: 1.5rem;\nmargin: 0;\npadding: 0;\ndisplay: flex;\njustify-self: end;\nfont-size: 2rem;\nbox-shadow: 1px 1px 1px rgba(0,0,0, 0.4), inset 1px 1px 1px rgba(0,0,0, 0.4);\na,\nbutton {\n  /* + */\n  font-family: 'radnika_next';\n  color: ", ";\n  text-shadow: 1px 1px 1px rgba(20,20,20,.4);\n  /* + */\n  padding: 1rem 3rem;\n  display: flex;\n  align-items: center;\n  position: relative;\n  text-transform: uppercase;\n  font-weight: 900;\n  font-size: 1em;\n  background: none;\n  border: 0;\n  cursor: pointer;\n  &:before {\n    height: 2px;\n    background: ", ";\n    content: '';\n    width: 0;\n    position: absolute;\n    transform: translateX(50%);\n    transition: width 0.4s;\n    transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);\n    left: 50%;\n    margin-top: 2rem;\n  }\n  &:after {\n    height: 2px;\n    background: ", ";\n    /* background: ", "; */\n    content: '';\n    width: 0;\n    position: absolute;\n    transform: translateX(-50%);\n    transition: width 0.4s;\n    transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);\n    left: 50%;\n    margin-top: 2rem;\n  }\n  \n  &:hover,\n  &:focus {\n    outline: none;\n    &:after {\n      width: calc(100% - 60px);\n    }\n  @media (max-width: 700px) {\n      width: calc(100% - 10px);\n  }\n  }\n}\n\n\n@media (max-width: 700px) {\n  flex-direction: column;\n  align-content: center;\n  justify-content: center;\n  /* position: relative; */\n  position: absolute;\n  top: -300px;\n  font-size: 10px;\n  padding: 0 10px;\n  box-shadow: 1px 1px 1px rgba(0,0,0, 0.4);\n}\n\n@media(max-width: 900px) {\n  font-size: 1.3rem;\n}\n@media(max-width: 1500px) {\n  font-size: 1.5rem;\n  ", "\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\nz-index: 9;\nbackground-color: #2c3e50;\n/* background-color: linear-gradient(to right, #2c3e50, #4E6E9D); */\n/* background: linear-gradient(to right, #2c3e50, #4E6E9D) url('../../static/__7.jpg'); */\n/* background-color: ", "; */\nbackground-image: url('https://res.cloudinary.com/kevinpena/image/upload/v1552189534/kpblog/nzklhp9svft52jcqeoii.jpg');\nbackground-repeat: no-repeat;\nbackground-attachment: fixed;\nbackground-size: cover;\nwidth: 100%;\njustify-content: center;\nfont-size: 1.5rem;\nmargin: 0;\npadding: 0;\ndisplay: flex;\njustify-self: end;\nfont-size: 2rem;\nbox-shadow: 1px 1px 1px rgba(0,0,0, 0.4), inset 1px 1px 1px rgba(0,0,0, 0.4);\na,\nbutton {\n  /* + */\n  font-family: 'radnika_next';\n  color: ", ";\n  text-shadow: 1px 1px 1px rgba(20,20,20,.4);\n  /* + */\n  padding: 1rem 3rem;\n  display: flex;\n  align-items: center;\n  position: relative;\n  text-transform: uppercase;\n  font-weight: 900;\n  font-size: 1em;\n  background: none;\n  border: 0;\n  cursor: pointer;\n  &:before {\n    height: 2px;\n    background: ", ";\n    content: '';\n    width: 0;\n    position: absolute;\n    transform: translateX(50%);\n    transition: width 0.4s;\n    transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);\n    left: 50%;\n    margin-top: 2rem;\n  }\n  &:after {\n    height: 2px;\n    background: ", ";\n    /* background: ", "; */\n    content: '';\n    width: 0;\n    position: absolute;\n    transform: translateX(-50%);\n    transition: width 0.4s;\n    transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);\n    left: 50%;\n    margin-top: 2rem;\n  }\n  \n  &:hover,\n  &:focus {\n    outline: none;\n    &:after {\n      width: calc(100% - 60px);\n    }\n  @media (max-width: 700px) {\n      width: calc(100% - 10px);\n  }\n  }\n}\n\n\n@media (max-width: 700px) {\n  flex-direction: column;\n  align-content: center;\n  justify-content: center;\n  /* position: relative; */\n  position: absolute;\n  top: -300px;\n  font-size: 10px;\n  padding: 0 10px;\n  box-shadow: 1px 1px 1px rgba(0,0,0, 0.4);\n}\n\n@media(max-width: 900px) {\n  font-size: 1.3rem;\n}\n@media(max-width: 1500px) {\n  font-size: 1.5rem;\n  ", "\n}\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -748,97 +748,116 @@ function (_Component) {
       }, function (_ref) {
         var me = _ref.data.me;
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavStyles, {
-          onClick: _this.props.openMobile,
           scroll: _this.props.scroll,
           mobile: _this.props.mobile,
-          className: "".concat(_this.props.mobile ? 'mobile' : '', " ").concat(_this.props.open ? 'open' : ''),
+          className: "".concat(_this.props.mobile && 'mobile', " ").concat(_this.props.open && 'open'),
           __source: {
             fileName: _jsxFileName,
             lineNumber: 127
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-          href: "/work",
+          href: {
+            pathname: '/tag',
+            query: {
+              hash: 'work'
+            }
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 128
+            lineNumber: 131
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 129
+            lineNumber: 132
           },
           __self: this
         }, "Work")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-          href: "/lifestyle",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 133
+          href: {
+            pathname: '/tag',
+            query: {
+              hash: 'lifestyle'
+            }
           },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 134
           },
           __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 135
+          },
+          __self: this
         }, "Lifestyle")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-          href: "/travel",
+          href: {
+            pathname: '/tag',
+            query: {
+              hash: 'travel'
+            }
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 137
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 138
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 139
-          },
-          __self: this
         }, "Travel")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-          href: "/family",
+          href: {
+            pathname: '/tag',
+            query: {
+              hash: 'family'
+            }
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 140
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 144
+            lineNumber: 141
           },
           __self: this
         }, "Family")), me && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, hasPermission(me, ['ADMIN']) ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
           href: "/createpost",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 154
+            lineNumber: 148
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 154
+            lineNumber: 148
           },
           __self: this
         }, "Post")) : '', react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Login_SignOut__WEBPACK_IMPORTED_MODULE_10__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 156
+            lineNumber: 150
           },
           __self: this
         })), !me && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
           href: "/login",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 161
+            lineNumber: 155
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 162
+            lineNumber: 156
           },
           __self: this
         }, "Login")));
@@ -884,7 +903,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/kevinpena/Documents/computerScience/self/kp-blog/frontend/components/Page.js";
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n        font-family: 'radnika_next';\n        src: url('/static/radnikanext-medium-webfont.woff2')\n        format('woff2');\n        font-weight: normal;\n        font-style: normal;\n    }\n    @font-face {\n        font-family: 'Lato';\n        src: url('/static/Lato-Regular.ttf')\n        format('truetype');\n        font-weight: lighter;\n        font-style: normal;\n    }\n    @font-face {\n        font-family: 'coalbrush';\n        src: url('/static/coalbrush.otf')\n        format('opentype');\n        font-weight: lighter;\n        font-style: normal;\n    }\n    /* @font-face {\n        font-family: 'Lato';\n        src: url('/static/Lato-Regular.ttf')\n        format('truetype');\n        font-weight: normal;\n        font-style: normal;\n    }\n    @font-face {\n        font-family: 'Lato';\n        src: url('/static/Lato-Bold.ttf')\n        format('truetype');\n        font-weight: bold;\n        font-style: normal;\n    } */\n    html {\n        box-sizing: border-box;\n        font-size: 10px;\n    }\n    *, *:before, *:after {\n            box-sizing: inherit;\n    }\n    body {\n            padding: 0;\n            margin: 0;\n            font-size: 1.5rem;\n            line-height: 2;\n            font-family: 'radnika_next';\n            outline: none;\n            /* background-color: rgba(52,56,56, 1); */\n    }\n    a {\n        text-decoration: none;\n        color: ", "\n    }\n\n    img {\n    animation: 2s ease-out 0s 1 fadeIn;\n    }\n    @keyframes heartBeat {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n\n  14% {\n    -webkit-transform: scale(1.3);\n    transform: scale(1.3);\n  }\n\n  28% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n\n  42% {\n    -webkit-transform: scale(1.3);\n    transform: scale(1.3);\n  }\n\n  70% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n\n@keyframes fadeIn {\n    0% {\n      /* transform: translateY(-100%); */\n      opacity: 0;\n    }\n    100% {\n      /* transform: translateY(0); */\n      opacity: 1;\n    }\n  }\n\n  .fadein {\n    animation: 1s ease-out 0s 1 fadeIn;\n  }\n\n.heartbeat {\n    -webkit-animation-name: heartBeat;\n  animation-name: heartBeat;\n  -webkit-animation-duration: 1.3s;\n  animation-duration: 1.3s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  animation-iteration-count: 2;\n}\n\n.heartbeatinf {\n  -webkit-animation-name: heartBeat;\n  animation-name: heartBeat;\n  -webkit-animation-duration: 1.3s;\n  animation-duration: 1.3s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  animation-iteration-count: infinite;\n}\n    \n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n        font-family: 'radnika_next';\n        src: url('/static/radnikanext-medium-webfont.woff2')\n        format('woff2');\n        font-weight: normal;\n        font-style: normal;\n    }\n    @font-face {\n        font-family: 'Lato';\n        src: url('/static/Lato-Regular.ttf')\n        format('truetype');\n        font-weight: lighter;\n        font-style: normal;\n    }\n    @font-face {\n        font-family: 'coalbrush';\n        src: url('/static/coalbrush.otf')\n        format('opentype');\n        font-weight: lighter;\n        font-style: normal;\n    }\n    html {\n        box-sizing: border-box;\n        font-size: 10px;\n    }\n    *\n{        \n    -webkit-user-select: none;\n    -moz-user-select: -moz-none;\n    /*IE10*/\n    -ms-user-select: none;\n    user-select: none;\n\n    /*You just need this if you are only concerned with android and not desktop browsers.*/\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}    \n    *, *:before, *:after {\n            box-sizing: inherit;\n    }\n    body {\n            padding: 0;\n            margin: 0;\n            font-size: 1.5rem;\n            line-height: 2;\n            font-family: 'radnika_next';\n            outline: none;\n            /* background-color: rgba(52,56,56, 1); */\n    }\n    a {\n        text-decoration: none;\n        color: ", "\n    }\n\n    img {\n    animation: 2s ease-out 0s 1 fadeIn;\n    }\n    @keyframes heartBeat {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n\n  14% {\n    -webkit-transform: scale(1.3);\n    transform: scale(1.3);\n  }\n\n  28% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n\n  42% {\n    -webkit-transform: scale(1.3);\n    transform: scale(1.3);\n  }\n\n  70% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n\n@keyframes fadeIn {\n    0% {\n      /* transform: translateY(-100%); */\n      opacity: 0;\n    }\n    100% {\n      /* transform: translateY(0); */\n      opacity: 1;\n    }\n  }\n\n  .fadein {\n    animation: 1s ease-out 0s 1 fadeIn;\n  }\n\n.heartbeat {\n    -webkit-animation-name: heartBeat;\n  animation-name: heartBeat;\n  -webkit-animation-duration: 1.3s;\n  animation-duration: 1.3s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  animation-iteration-count: 2;\n}\n\n.heartbeatinf {\n  -webkit-animation-name: heartBeat;\n  animation-name: heartBeat;\n  -webkit-animation-duration: 1.3s;\n  animation-duration: 1.3s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  animation-iteration-count: infinite;\n}\n\n\n    \n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -958,44 +977,44 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 160
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledPage, {
         className: "fadein",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 161
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 162
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 163
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 164
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Inner, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 165
         },
         __self: this
       }, this.props.children), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167
+          lineNumber: 166
         },
         __self: this
       })));

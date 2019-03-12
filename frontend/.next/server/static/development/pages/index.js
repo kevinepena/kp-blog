@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -264,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/kevinpena/Documents/computerScience/self/kp-blog/frontend/components/Hero/index.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    /* background-image: url(\"../static/mts.jpg\"); */\n    /* background: #141e30;  */\n    /* background: -webkit-linear-gradient(to top, #141e30, #243b55); */\n    /* background: linear-gradient(to top, #141e30, #243b55);  */\n    grid-gap: 5px;\n    /* padding: 0 15px; */\n    min-height: 414px;\n    margin: 86px auto 0 auto;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    /* grid-template-rows: repeat(auto-fit, minmax(150px, 250px)); */    \n    /* grid-template-rows: 250px; */\n    padding: 0px 5px 5px 5px;\n    text-align: center;\n    background-attachment: fixed;\n    /* background-position: top; */\n    background-repeat: no-repeat;\n    background-size: cover;\n    /* border-bottom-left-radius: 1%; */\n    /* border-bottom-right-radius: 1%; */\n    /* border-bottom-right-radius: 100% 60%; */\n    /* border-bottom-left-radius: 100% 60%; */\n    /* clip-path: ellipse(100% 100% at 50% 0%); */\n\n    >div {\n        background-color: rgba(50,50,50, .1);\n        border: 1px solid #3A3A3A;\n        border-radius: 5px;\n        }\n\n    div:nth-of-type(1) {\n            background-image: url(\"../static/me2.jpg\");\n            background-repeat: no-repeat;\n            background-size: cover;\n            /* grid-row: 1 / 3; */\n        }\n\n    div:nth-of-type(2) {\n        background-image: url(\"../static/dogs1.jpg\");\n        background-position: 0px;\n        background-repeat: no-repeat;\n        background-size: cover;\n        background-position: -110px 0px;\n\n    }\n    div:nth-of-type(3) {\n        background-image: url(\"../static/health1.jpg\");\n        background-position: 0px;\n        background-repeat: no-repeat;\n        background-size: cover;\n    } \n\n    \n    \n    \n    @media(max-width: 500px) {\n        grid-template-columns: repeat(2, 1fr);\n        \n            div:nth-of-type(1) {\n                grid-column: 1 / -1;\n                background-position: 0px ;\n                background-repeat: no-repeat;\n                background-size: cover;\n                background-image: url(\"../static/me.jpg\");\n            }\n            div:nth-of-type(1):hover {\n                grid-column: 1 / -1;\n                background-position: 0px ;\n                background-repeat: no-repeat;\n                background-size: cover;\n                background-image: url(\"../static/me.jpg\");\n            }\n            div:nth-of-type(2) {\n                background-image: url(\"../static/dogs1.jpg\");\n                background-position: 0px;\n                background-repeat: no-repeat;\n                background-size: cover;\n            }\n        }\n    @media(max-width: 700px) {\n        >div {\n            background-color: rgba(50,50,50, .1);\n        border: 1px solid #3A3A3A;\n        border-radius: 5px;\n        background-position: center;\n        }\n        }\n\n        @media(min-width: 500px) {\n            div:nth-of-type(3) {\n        background-image: url(\"../static/health1.jpg\");\n        background-position: -70px;\n        background-repeat: no-repeat;\n        background-size: cover;\n    } \n        }\n    \n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    /* background-image: url(\"../static/mts.jpg\"); */\n    /* background: #141e30;  */\n    /* background: -webkit-linear-gradient(to top, #141e30, #243b55); */\n    /* background: linear-gradient(to top, #141e30, #243b55);  */\n    grid-gap: 5px;\n    /* padding: 0 15px; */\n    min-height: 414px;\n    margin: 86px auto 0 auto;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    /* grid-template-rows: repeat(auto-fit, minmax(150px, 250px)); */    \n    /* grid-template-rows: 250px; */\n    padding: 0px 5px 5px 5px;\n    text-align: center;\n    background-attachment: fixed;\n    /* background-position: top; */\n    background-repeat: no-repeat;\n    background-size: cover;\n    /* border-bottom-left-radius: 1%; */\n    /* border-bottom-right-radius: 1%; */\n    /* border-bottom-right-radius: 100% 60%; */\n    /* border-bottom-left-radius: 100% 60%; */\n    /* clip-path: ellipse(100% 100% at 50% 0%); */\n\n    >div {\n        background-color: rgba(50,50,50, .1);\n        border: 1px solid #3A3A3A;\n        border-radius: 5px;\n        }\n\n    div:nth-of-type(1) {\n            background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189532/kpblog/iymyjyjmsacyv7bdriec.jpg\");\n            background-repeat: no-repeat;\n            background-size: cover;\n            /* grid-row: 1 / 3; */\n        }\n\n    div:nth-of-type(2) {\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189518/kpblog/anzkugtq9tqczpysm8qr.jpg\");\n        background-position: 0px;\n        background-repeat: no-repeat;\n        background-size: cover;\n        background-position: -110px 0px;\n\n    }\n    div:nth-of-type(3) {\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189528/kpblog/swyjxkfar9vhrapxefd5.jpg\");\n        background-position: 0px;\n        background-repeat: no-repeat;\n        background-size: cover;\n    } \n\n    \n    \n    \n    @media(max-width: 500px) {\n        grid-template-columns: repeat(2, 1fr);\n        \n            div:nth-of-type(1) {\n                grid-column: 1 / -1;\n                background-position: 0px ;\n                background-repeat: no-repeat;\n                background-size: cover;\n                background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg\");\n            }\n            div:nth-of-type(1):hover {\n                grid-column: 1 / -1;\n                background-position: 0px ;\n                background-repeat: no-repeat;\n                background-size: cover;\n                background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg\");\n            }\n            div:nth-of-type(2) {\n                background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189518/kpblog/anzkugtq9tqczpysm8qr.jpg\");\n                background-position: 0px;\n                background-repeat: no-repeat;\n                background-size: cover;\n            }\n        }\n    @media(max-width: 700px) {\n        >div {\n            background-color: rgba(50,50,50, .1);\n        border: 1px solid #3A3A3A;\n        border-radius: 5px;\n        background-position: center;\n        }\n        }\n\n        @media(min-width: 500px) {\n            div:nth-of-type(3) {\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189528/kpblog/swyjxkfar9vhrapxefd5.jpg\");\n        background-position: -70px;\n        background-repeat: no-repeat;\n        background-size: cover;\n    } \n        }\n    \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1119,7 +1119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: white;\n  border: 1px solid ", ";\n  box-shadow: ", ";\n  position: relative;\n  display: flex;\n  flex-direction: column;\n\n  img {\n    width: 100%;\n    /* height: 400px; */\n    object-fit: contain;\n  }\n  p {\n    font-size: 12px;\n    line-height: 2;\n    font-weight: 300;\n    flex-grow: 1;\n    padding: 0 3rem;\n    font-size: 1.5rem;\n  }\n  .buttonList {\n    display: grid;\n    width: 100%;\n    border-top: 1px solid ", ";\n    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));\n    grid-gap: 1px;\n    background: ", ";\n    & > * {\n      background: white;\n      border: 0;\n      font-size: 1rem;\n      padding: 1rem;\n    }\n  }\n  .tags {\n    a {\n      padding: 5px;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: white;\n  border: 1px solid ", ";\n  box-shadow: ", ";\n  position: relative;\n  display: flex;\n  flex-direction: column;\n\n  img {\n    width: 100%;\n    /* height: 400px; */\n    object-fit: contain;\n  }\n  p {\n    font-size: 12px;\n    line-height: 2;\n    font-weight: 300;\n    flex-grow: 1;\n    padding: 0 3rem;\n    font-size: 1.5rem;\n  }\n  .buttonList {\n    display: grid;\n    width: 100%;\n    border-top: 1px solid ", ";\n    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));\n    grid-gap: 1px;\n    background: ", ";\n    & > * {\n      background: white;\n      border: 0;\n      font-size: 1rem;\n      padding: 1rem;\n    }\n  }\n  .tags {\n    margin: 10px auto;\n    a {\n      padding: 5px;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2530,7 +2530,7 @@ var _jsxFileName = "/Users/kevinpena/Documents/computerScience/self/kp-blog/fron
 
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    background: ", ";\n    transform: skewX(0deg) skewY(-15deg);\n    /* transform-style: rotateY preserve-3d; */\n    div > div{\n            transition: all .5s ease-in-out;\n            /* transform-style: preserve-3d; */\n            transform: skewX(0deg) skewY(15deg) scale(.6);\n        }\n    div > div:hover{\n            transition: all .5s ease-in-out;\n        }\n\n    div > div:nth-of-type(3):hover {\n        transform: skewY(15deg) skewX(0deg) scale(.66);\n        background-image: url(\"../static/us.jpg\");\n        background-position: center;\n    }\n\n    div > div:nth-of-type(2):hover {\n        transform: skewY(15deg) skewX(0deg) scale(.77);\n        background-image: url(\"../static/dogs.jpg\");\n        background-position: 0;\n    }\n\n    @media (min-width: 500) {\n        div > div:nth-of-type(1):hover {\n        transform: skewY(15deg) skewX(0deg) rotateY(-180deg)  scale(.66);\n        background-image: url(\"../static/me.jpg\");\n        background-position: -210px;\n    }\n    }\n\n    @media all and (min-width: 500px) and (max-width: 900px) {\n        div > div:nth-of-type(2):hover {\n        transform: skewY(15deg) skewX(0deg) scale(.66);\n        background-image: url(\"../static/dogs.jpg\");\n        background-position: -59px 0px;\n    }\n    }\n\n    @media(max-width: 500px) {\n        div > div:nth-of-type(1) {\n        transform: skewY(15deg) skewX(0deg) rotateY(-180deg)  scale(.6);\n        background-image: url(\"../static/me.jpg\");\n        background-position: center;\n    }\n    }\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    background: ", ";\n    transform: skewX(0deg) skewY(-15deg);\n    /* transform-style: rotateY preserve-3d; */\n    div > div{\n            transition: all .5s ease-in-out;\n            /* transform-style: preserve-3d; */\n            transform: skewX(0deg) skewY(15deg) scale(.6);\n        }\n    div > div:hover{\n            transition: all .5s ease-in-out;\n        }\n\n    div > div:nth-of-type(3):hover {\n        transform: skewY(15deg) skewX(0deg) scale(.66);\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189536/kpblog/mgal9lzl5rolqfokz6xe.jpg\");\n        background-position: center;\n    }\n\n    div > div:nth-of-type(2):hover {\n        transform: skewY(15deg) skewX(0deg) scale(.77);\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189513/kpblog/eibbi1speacak0sxrunx.jpg\");\n        background-position: 0;\n    }\n\n\n    @media (min-width: 500) {\n        div > div:nth-of-type(1):hover {\n        transform: skewY(15deg) skewX(0deg) rotateY(-180deg)  scale(.66);\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg\");\n        background-position: -210px;\n    }\n    }\n\n    @media all and (min-width: 500px) and (max-width: 900px) {\n        div > div:nth-of-type(2):hover {\n        transform: skewY(15deg) skewX(0deg) scale(.66);\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189513/kpblog/eibbi1speacak0sxrunx.jpg\");\n        background-position: -59px 0px;\n    }\n    }\n\n    @media(max-width: 500px) {\n        div > div:nth-of-type(1) {\n        transform: skewY(15deg) skewX(0deg) rotateY(-180deg)  scale(.6);\n        background-image: url(\"https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg\");\n        background-position: center;\n    }\n    }\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -2575,31 +2575,33 @@ var Home = function Home(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Follow, {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 120
     },
     __self: this
-  }, "Follow me"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Journey, {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Follow, {
+    className: "fadein",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 121
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, "Follow me"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Journey, {
+    className: "fadein",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 124
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
   }, "On"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }), "my journey"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -2610,26 +2612,27 @@ var Home = function Home(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Skew, {
+    className: "fadein",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Hero__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Posts__WEBPACK_IMPORTED_MODULE_3__["default"], {
     page: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_0___default()(props.query.page) || 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 137
     },
     __self: this
   }));
@@ -2639,7 +2642,7 @@ var Home = function Home(props) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

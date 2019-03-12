@@ -53,24 +53,21 @@ const GlobalStyle = createGlobalStyle`
         font-weight: lighter;
         font-style: normal;
     }
-    /* @font-face {
-        font-family: 'Lato';
-        src: url('/static/Lato-Regular.ttf')
-        format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Lato';
-        src: url('/static/Lato-Bold.ttf')
-        format('truetype');
-        font-weight: bold;
-        font-style: normal;
-    } */
     html {
         box-sizing: border-box;
         font-size: 10px;
     }
+    *
+{        
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    /*IE10*/
+    -ms-user-select: none;
+    user-select: none;
+
+    /*You just need this if you are only concerned with android and not desktop browsers.*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}    
     *, *:before, *:after {
             box-sizing: inherit;
     }
@@ -152,6 +149,8 @@ const GlobalStyle = createGlobalStyle`
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+
+
     
 `;
 

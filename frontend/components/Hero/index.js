@@ -33,14 +33,14 @@ const Paralax = styled.div`
         }
 
     div:nth-of-type(1) {
-            background-image: url("../static/me2.jpg");
+            background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189532/kpblog/iymyjyjmsacyv7bdriec.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             /* grid-row: 1 / 3; */
         }
 
     div:nth-of-type(2) {
-        background-image: url("../static/dogs1.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189518/kpblog/anzkugtq9tqczpysm8qr.jpg");
         background-position: 0px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -48,7 +48,7 @@ const Paralax = styled.div`
 
     }
     div:nth-of-type(3) {
-        background-image: url("../static/health1.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189528/kpblog/swyjxkfar9vhrapxefd5.jpg");
         background-position: 0px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -65,17 +65,17 @@ const Paralax = styled.div`
                 background-position: 0px ;
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-image: url("../static/me.jpg");
+                background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg");
             }
             div:nth-of-type(1):hover {
                 grid-column: 1 / -1;
                 background-position: 0px ;
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-image: url("../static/me.jpg");
+                background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189523/kpblog/jixklxjrghsgzipiwqfo.jpg");
             }
             div:nth-of-type(2) {
-                background-image: url("../static/dogs1.jpg");
+                background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189518/kpblog/anzkugtq9tqczpysm8qr.jpg");
                 background-position: 0px;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -92,7 +92,7 @@ const Paralax = styled.div`
 
         @media(min-width: 500px) {
             div:nth-of-type(3) {
-        background-image: url("../static/health1.jpg");
+        background-image: url("https://res.cloudinary.com/kevinpena/image/upload/v1552189528/kpblog/swyjxkfar9vhrapxefd5.jpg");
         background-position: -70px;
         background-repeat: no-repeat;
         background-size: cover;

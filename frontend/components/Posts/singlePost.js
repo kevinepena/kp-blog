@@ -54,6 +54,9 @@ const SingleItemStyles = styled.div`
         z-index: 1;
         padding: 10px;
     }
+    .tags {
+        margin: 110px auto;
+    }
 
     @media(max-width: 500px) {
         margin: 0 auto;

@@ -22,9 +22,9 @@ type Mutation {
     signout: SuccessMessage
     createTag(hash: String): Tag!
     updateTag(id: ID!): Tag!
-    # requestReset(email: String!): SuccessMessage
-    # resetPassword(resetToken: String!, password: String!, confirmPassword: String!): User!
-    # updatePermissions(permissions: [Permission], userId: ID!): User
+    requestReset(email: String!): SuccessMessage
+    resetPassword(resetToken: String!, password: String!, confirmPassword: String!): User!
+    updatePermissions(permissions: [Permission], userId: ID!): User
 }
 
 type User{
