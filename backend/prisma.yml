@@ -1,4 +1,5 @@
 endpoint: ${env:PRISMA_ENDPOINT}
+# endpoint: https://kp-blog-prod-21a80be1f2.herokuapp.com/kpblog-backend-prod/dev
 datamodel: datamodel.graphql
 # SECRET: ${env:PRISMA_SECRET}
 hooks:
