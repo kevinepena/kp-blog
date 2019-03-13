@@ -57,7 +57,7 @@ class Posts extends Component {
                         if (loading) return "Loading...";
                         if (error) return `Error: ${error.message}`;
                         return <PostsList>
-                            {data.posts.map((post, i) => <div key={i} className={i % 3}><Post post={post} key={post.id} /></div>)}
+                            {data.posts.map((post, i) => <div key={i} className={`row${i % 3}`}><Post post={post} key={post.id} /></div>)}
                         </PostsList>
                     }}
                 </Query>

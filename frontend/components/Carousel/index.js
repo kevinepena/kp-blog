@@ -3,6 +3,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import CarouselItem from 'react-bootstrap/CarouselItem';
 import styled from 'styled-components';
 
+function randomNumber() {
+  return Math.floor(Math.random() * (7 - 5 + 1)) + 5;
+}
+
 const Styled = styled.div`
 
 .carousel {
@@ -185,64 +189,66 @@ const Styled = styled.div`
 
 class CarouselComp extends Component {
 
-    constructor(props, context) {
-        super(props, context);
-        this.handleSelect = this.handleSelect.bind(this);
-    }
+  constructor(props, context) {
+    super(props, context);
+    this.handleSelect = this.handleSelect.bind(this);
+  }
 
-    state = {
-        index: 0,
-        direction: null,
-        images: []
-    }
+  state = {
+    index: 0,
+    direction: null,
+    images: []
+  }
 
-    componentWillReceiveProps() {
+  componentWillReceiveProps() {
 
 
-    }
+  }
 
-    handleSelect(selectedIndex, e) {
-        this.setState({
-            index: selectedIndex,
-            direction: e.direction
-        })
-    }
+  handleSelect(selectedIndex, e) {
+    this.setState({
+      index: selectedIndex,
+      direction: e.direction
+    })
+  }
 
-    render() {
+  render() {
 
-        const { index, direction } = this.state;
-        const { images } = this.props;
+    const { index, direction } = this.state;
+    const { images } = this.props;
 
-        let empty = [];
+    let empty = [];
 
-        if (images.length > 0) {
-            for (let i = 0; i < images.length; i++) {
-                empty.push(
-                    <CarouselItem key={i}>
-                        <img
-                            className="d-block w-100"
-                            src={images[i]}
-                        />
-                    </CarouselItem>
-                )
-            }
-        }
-
-        return (
-            <Styled>
-                <Carousel
-                    activeIndex={index}
-                    direction={direction}
-                    onSelect={this.handleSelect}
-                    pauseOnHover={true}
-                    fade={true}
-                    wrap={true}
-                >
-
-                    {empty[0] && empty}
-                </Carousel>
-            </Styled>
+    if (images.length > 0) {
+      for (let i = 0; i < images.length; i++) {
+        empty.push(
+          <CarouselItem key={i}>
+            <img
+              className="d-block w-100"
+              src={images[i]}
+            />
+          </CarouselItem>
         )
+      }
     }
+
+    return (
+      <Styled>
+        <Carousel
+          activeIndex={index}
+          direction={direction}
+          onSelect={this.handleSelect}
+          pauseOnHover={true}
+          fade={true}
+          wrap={true}
+          interval={5000}
+
+        >
+
+          {empty[0] && empty}
+        </Carousel>
+      </Styled>
+    )
+  }
 }
 export default CarouselComp;

@@ -31,7 +31,7 @@ const Name2 = styled.span`
 transition: all .5s ease-in-out;
 font-family: 'Lato';
 font-weight: lighter;
-color: ${props => props.theme.grey};
+color: ${props => props.theme.darkGrey};
 text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 

@@ -8,12 +8,20 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
 
+  div:nth-of-type(1) {
+    border-radius: 3px;
+    /* box-shadow: ${props => props.theme.bs}; */
+  }
+
+
   img {
     width: 100%;
     /* height: 400px; */
     object-fit: contain;
   }
   p {
+    font-weight: lighter;
+    text-align: left;
     font-size: 12px;
     line-height: 2;
     font-weight: 300;
@@ -36,11 +44,22 @@ const Item = styled.div`
     }
   }
   .tags {
-    margin: 10px auto;
+    margin: 10px 0px;
+    text-align: left;
+    padding: 0 3rem;
     a {
+      margin: 0 5px;
       padding: 5px;
+      /* background-color: ${props => props.theme.darkGrey}; */
+      color: ${props => props.theme.grey};
+      border-radius: 3px;
     }
   }
+
+  .carousel-inner {
+    max-height: 200px;
+  }
+  
 `;
 
 export default Item;

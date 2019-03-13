@@ -940,7 +940,8 @@ function _templateObject() {
 var theme = {
   red: '#FF0000',
   black: '#393939',
-  grey: '#3A3A3A',
+  darkGrey: '#3A3A3A',
+  grey: '#797C80',
   lightgrey: '#E1E1E1',
   offWhite: '#EDEDED',
   mintGreen: 'rgba(182,216,192, 1)',
@@ -977,44 +978,44 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 161
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledPage, {
         className: "fadein",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 162
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 163
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 164
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 165
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Inner, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 166
         },
         __self: this
       }, this.props.children), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 167
         },
         __self: this
       })));
@@ -1266,7 +1267,7 @@ var Name1 = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div(_templa
   return props.theme.offWhite;
 });
 var Name2 = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.span(_templateObject2(), function (props) {
-  return props.theme.grey;
+  return props.theme.darkGrey;
 });
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div(_templateObject3());
 

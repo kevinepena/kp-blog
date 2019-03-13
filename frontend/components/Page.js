@@ -8,7 +8,8 @@ import Footer from '../components/Footer';
 const theme = {
     red: '#FF0000',
     black: '#393939',
-    grey: '#3A3A3A',
+    darkGrey: '#3A3A3A',
+    grey: '#797C80',
     lightgrey: '#E1E1E1',
     offWhite: '#EDEDED',
     mintGreen: 'rgba(182,216,192, 1)',

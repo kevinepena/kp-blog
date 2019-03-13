@@ -108,14 +108,14 @@ class UpdatePost extends Component {
                                                 required />
                                         </label>
                                         <label htmlFor="content">
-                                        Content
+                                            Content
                     <textarea
                                                 id="content"
                                                 name="content"
                                                 placeholder="Content"
                                                 defaultValue={data.data.post.content}
                                                 onChange={this.handleChange}
-                                                required />
+                                            />
                                         </label>
                                         <button type="submit">Sav{loading ? 'ing' : 'e'} Changes</button>
                                     </fieldset>

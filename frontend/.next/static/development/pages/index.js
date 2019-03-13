@@ -48,6 +48,11 @@ function _templateObject() {
 
 
 
+
+function randomNumber() {
+  return Math.floor(Math.random() * (7 - 5 + 1)) + 5;
+}
+
 var Styled = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div(_templateObject());
 
 var CarouselComp =
@@ -98,7 +103,7 @@ function (_Component) {
             key: i,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 221
+              lineNumber: 225
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
@@ -106,7 +111,7 @@ function (_Component) {
             src: images[i],
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 222
+              lineNumber: 226
             },
             __self: this
           })));
@@ -116,7 +121,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Styled, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 236
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -126,9 +131,10 @@ function (_Component) {
         pauseOnHover: true,
         fade: true,
         wrap: true,
+        interval: 5000,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 237
         },
         __self: this
       }, empty[0] && empty));
@@ -663,7 +669,7 @@ function (_Component) {
         }, data.posts.map(function (post, i) {
           return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
             key: i,
-            className: i % 3,
+            className: "row".concat(i % 3),
             __source: {
               fileName: _jsxFileName,
               lineNumber: 60
@@ -1021,7 +1027,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: white;\n  border: 1px solid ", ";\n  box-shadow: ", ";\n  position: relative;\n  display: flex;\n  flex-direction: column;\n\n  img {\n    width: 100%;\n    /* height: 400px; */\n    object-fit: contain;\n  }\n  p {\n    font-size: 12px;\n    line-height: 2;\n    font-weight: 300;\n    flex-grow: 1;\n    padding: 0 3rem;\n    font-size: 1.5rem;\n  }\n  .buttonList {\n    display: grid;\n    width: 100%;\n    border-top: 1px solid ", ";\n    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));\n    grid-gap: 1px;\n    background: ", ";\n    & > * {\n      background: white;\n      border: 0;\n      font-size: 1rem;\n      padding: 1rem;\n    }\n  }\n  .tags {\n    margin: 10px auto;\n    a {\n      padding: 5px;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: white;\n  border: 1px solid ", ";\n  box-shadow: ", ";\n  position: relative;\n  display: flex;\n  flex-direction: column;\n\n  div:nth-of-type(1) {\n    border-radius: 3px;\n    /* box-shadow: ", "; */\n  }\n\n\n  img {\n    width: 100%;\n    /* height: 400px; */\n    object-fit: contain;\n  }\n  p {\n    font-weight: lighter;\n    text-align: left;\n    font-size: 12px;\n    line-height: 2;\n    font-weight: 300;\n    flex-grow: 1;\n    padding: 0 3rem;\n    font-size: 1.5rem;\n  }\n  .buttonList {\n    display: grid;\n    width: 100%;\n    border-top: 1px solid ", ";\n    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));\n    grid-gap: 1px;\n    background: ", ";\n    & > * {\n      background: white;\n      border: 0;\n      font-size: 1rem;\n      padding: 1rem;\n    }\n  }\n  .tags {\n    margin: 10px 0px;\n    text-align: left;\n    padding: 0 3rem;\n    a {\n      margin: 0 5px;\n      padding: 5px;\n      /* background-color: ", "; */\n      color: ", ";\n      border-radius: 3px;\n    }\n  }\n\n  .carousel-inner {\n    max-height: 200px;\n  }\n  \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1036,9 +1042,15 @@ var Item = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templa
 }, function (props) {
   return props.theme.bs;
 }, function (props) {
+  return props.theme.bs;
+}, function (props) {
   return props.theme.lightgrey;
 }, function (props) {
   return props.theme.lightgrey;
+}, function (props) {
+  return props.theme.darkGrey;
+}, function (props) {
+  return props.theme.grey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Item);
 
@@ -1058,7 +1070,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin: 0 1rem;\n  text-align: center;\n  transform: skew(-5deg) rotate(-1deg);\n  margin-top: -3rem;\n  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);\n  a {\n    background: ", ";\n    display: inline;\n    line-height: 1.3;\n    font-size: 4rem;\n    text-align: center;\n    color: white;\n    padding: 0 1rem;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin: 0 1rem;\n  text-align: left;\n  /* transform: skew(-5deg) rotate(-1deg); */\n  /* margin-top: -3rem; */\n  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);\n  a {\n    /* background: ", "; */\n    display: inline;\n    line-height: 1.3;\n    font-size: 2rem;\n    text-align: center;\n    color: ", ";\n    padding: 0 1rem;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1070,6 +1082,8 @@ function _templateObject() {
 
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(_templateObject(), function (props) {
   return props.theme.grey;
+}, function (props) {
+  return props.theme.darkGrey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Title);
 
@@ -5037,7 +5051,7 @@ var ApolloError = (function (_super) {
 /*!*********************************************!*\
   !*** ./node_modules/apollo-client/index.js ***!
   \*********************************************/
-/*! exports provided: ObservableQuery, NetworkStatus, FetchType, isApolloError, ApolloError, ApolloClient, default */
+/*! exports provided: ObservableQuery, NetworkStatus, isApolloError, ApolloError, ApolloClient, default, FetchType */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22655,285 +22669,286 @@ var defaultProps = {
 };
 
 var Carousel =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inheritsLoose2.default)(Carousel, _React$Component);
+  /*#__PURE__*/
+  function (_React$Component) {
+    (0, _inheritsLoose2.default)(Carousel, _React$Component);
 
-  function Carousel(props, context) {
-    var _this;
+    function Carousel(props, context) {
+      var _this;
 
-    _this = _React$Component.call(this, props, context) || this;
+      _this = _React$Component.call(this, props, context) || this;
 
-    _this.handleSlideEnd = function () {
-      var pendingIndex = _this._pendingIndex;
-      _this._isSliding = false;
-      _this._pendingIndex = null;
-      if (pendingIndex != null) _this.to(pendingIndex);else _this.cycle();
-    };
+      _this.handleSlideEnd = function () {
+        var pendingIndex = _this._pendingIndex;
+        _this._isSliding = false;
+        _this._pendingIndex = null;
+        if (pendingIndex != null) _this.to(pendingIndex); else _this.cycle();
+      };
 
-    _this.handleMouseOut = function () {
-      _this.cycle();
-    };
+      _this.handleMouseOut = function () {
+        _this.cycle();
+      };
 
-    _this.handleMouseOver = function () {
-      if (_this.props.pauseOnHover) _this.pause();
-    };
+      _this.handleMouseOver = function () {
+        if (_this.props.pauseOnHover) _this.pause();
+      };
 
-    _this.handleKeyDown = function (event) {
-      if (/input|textarea/i.test(event.target.tagName)) return;
+      _this.handleKeyDown = function (event) {
+        if (/input|textarea/i.test(event.target.tagName)) return;
 
-      switch (event.key) {
-        case 'ArrowLeft':
-          event.preventDefault();
+        switch (event.key) {
+          case 'ArrowLeft':
+            event.preventDefault();
 
-          _this.handlePrev(event);
+            _this.handlePrev(event);
 
-          break;
+            break;
 
-        case 'ArrowRight':
-          event.preventDefault();
+          case 'ArrowRight':
+            event.preventDefault();
 
-          _this.handleNext(event);
+            _this.handleNext(event);
 
-          break;
+            break;
 
-        default:
-          break;
-      }
-    };
+          default:
+            break;
+        }
+      };
 
-    _this.handleNextWhenVisible = function () {
-      if (!_this.isUnmounted && !document.hidden && (0, _style.default)(_this.carousel.current, 'visibility') !== 'hidden') {
-        _this.handleNext();
-      }
-    };
+      _this.handleNextWhenVisible = function () {
+        if (!_this.isUnmounted && !document.hidden && (0, _style.default)(_this.carousel.current, 'visibility') !== 'hidden') {
+          _this.handleNext();
+        }
+      };
 
-    _this.handleNext = function (e) {
-      if (_this._isSliding) return;
-      var _this$props = _this.props,
+      _this.handleNext = function (e) {
+        if (_this._isSliding) return;
+        var _this$props = _this.props,
           wrap = _this$props.wrap,
           activeIndex = _this$props.activeIndex;
-      var index = activeIndex + 1;
-      var count = countChildren(_this.props.children);
+        var index = activeIndex + 1;
+        var count = countChildren(_this.props.children);
 
-      if (index > count - 1) {
-        if (!wrap) return;
-        index = 0;
-      }
+        if (index > count - 1) {
+          if (!wrap) return;
+          index = 0;
+        }
 
-      _this.select(index, e, 'next');
-    };
+        _this.select(index, e, 'next');
+      };
 
-    _this.handlePrev = function (e) {
-      if (_this._isSliding) return;
-      var _this$props2 = _this.props,
+      _this.handlePrev = function (e) {
+        if (_this._isSliding) return;
+        var _this$props2 = _this.props,
           wrap = _this$props2.wrap,
           activeIndex = _this$props2.activeIndex;
-      var index = activeIndex - 1;
+        var index = activeIndex - 1;
 
-      if (index < 0) {
-        if (!wrap) return;
-        index = countChildren(_this.props.children) - 1;
-      }
+        if (index < 0) {
+          if (!wrap) return;
+          index = countChildren(_this.props.children) - 1;
+        }
 
-      _this.select(index, e, 'prev');
-    };
-
-    _this.state = {
-      prevClasses: '',
-      currentClasses: 'active'
-    };
-    _this.isUnmounted = false;
-    _this.carousel = _react.default.createRef();
-    return _this;
-  }
-
-  var _proto = Carousel.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.cycle();
-  };
-
-  Carousel.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
-    var previousActiveIndex = _ref.activeIndex;
-
-    if (nextProps.activeIndex !== previousActiveIndex) {
-      var lastPossibleIndex = countChildren(nextProps.children) - 1;
-      var nextIndex = Math.max(0, Math.min(nextProps.activeIndex, lastPossibleIndex));
-      var direction;
-
-      if (nextIndex === 0 && previousActiveIndex >= lastPossibleIndex || previousActiveIndex <= nextIndex) {
-        direction = 'next';
-      } else {
-        direction = 'prev';
-      }
-
-      return {
-        direction: direction,
-        previousActiveIndex: previousActiveIndex,
-        activeIndex: nextIndex
+        _this.select(index, e, 'prev');
       };
+
+      _this.state = {
+        prevClasses: '',
+        currentClasses: 'active'
+      };
+      _this.isUnmounted = false;
+      _this.carousel = _react.default.createRef();
+      return _this;
     }
 
-    return null;
-  };
+    var _proto = Carousel.prototype;
 
-  _proto.componentDidUpdate = function componentDidUpdate(_, prevState) {
-    var _this2 = this;
+    _proto.componentDidMount = function componentDidMount() {
+      this.cycle();
+    };
 
-    var _this$props3 = this.props,
+    Carousel.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
+      var previousActiveIndex = _ref.activeIndex;
+
+      if (nextProps.activeIndex !== previousActiveIndex) {
+        var lastPossibleIndex = countChildren(nextProps.children) - 1;
+        var nextIndex = Math.max(0, Math.min(nextProps.activeIndex, lastPossibleIndex));
+        var direction;
+
+        if (nextIndex === 0 && previousActiveIndex >= lastPossibleIndex || previousActiveIndex <= nextIndex) {
+          direction = 'next';
+        } else {
+          direction = 'prev';
+        }
+
+        return {
+          direction: direction,
+          previousActiveIndex: previousActiveIndex,
+          activeIndex: nextIndex
+        };
+      }
+
+      return null;
+    };
+
+    _proto.componentDidUpdate = function componentDidUpdate(_, prevState) {
+      var _this2 = this;
+
+      var _this$props3 = this.props,
         bsPrefix = _this$props3.bsPrefix,
         slide = _this$props3.slide;
-    if (!slide || this.state.activeIndex === prevState.activeIndex || this._isSliding) return;
-    var _this$state = this.state,
+      if (!slide || this.state.activeIndex === prevState.activeIndex || this._isSliding) return;
+      var _this$state = this.state,
         activeIndex = _this$state.activeIndex,
         direction = _this$state.direction;
-    var orderClassName, directionalClassName;
+      var orderClassName, directionalClassName;
 
-    if (direction === 'next') {
-      orderClassName = bsPrefix + "-item-next";
-      directionalClassName = bsPrefix + "-item-left";
-    } else if (direction === 'prev') {
-      orderClassName = bsPrefix + "-item-prev";
-      directionalClassName = bsPrefix + "-item-right";
-    }
+      if (direction === 'next') {
+        orderClassName = bsPrefix + "-item-next";
+        directionalClassName = bsPrefix + "-item-left";
+      } else if (direction === 'prev') {
+        orderClassName = bsPrefix + "-item-prev";
+        directionalClassName = bsPrefix + "-item-right";
+      }
 
-    this._isSliding = true;
-    this.pause(); // eslint-disable-next-line react/no-did-update-set-state
+      this._isSliding = true;
+      this.pause(); // eslint-disable-next-line react/no-did-update-set-state
 
-    this.safeSetState({
-      prevClasses: 'active',
-      currentClasses: orderClassName
-    }, function () {
-      var items = _this2.carousel.current.children;
-      var nextElement = items[activeIndex];
-      (0, _triggerBrowserReflow.default)(nextElement);
-
-      _this2.safeSetState({
-        prevClasses: (0, _classnames.default)('active', directionalClassName),
-        currentClasses: (0, _classnames.default)(orderClassName, directionalClassName)
+      this.safeSetState({
+        prevClasses: 'active',
+        currentClasses: orderClassName
       }, function () {
-        return _transition.default.end(nextElement, function () {
-          return _this2.safeSetState({
-            prevClasses: '',
-            currentClasses: 'active'
-          }, _this2.handleSlideEnd);
+        var items = _this2.carousel.current.children;
+        var nextElement = items[activeIndex];
+        (0, _triggerBrowserReflow.default)(nextElement);
+
+        _this2.safeSetState({
+          prevClasses: (0, _classnames.default)('active', directionalClassName),
+          currentClasses: (0, _classnames.default)(orderClassName, directionalClassName)
+        }, function () {
+          return _transition.default.end(nextElement, function () {
+            return _this2.safeSetState({
+              prevClasses: '',
+              currentClasses: 'active'
+            }, _this2.handleSlideEnd);
+          });
         });
       });
-    });
-  };
+    };
 
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    clearTimeout(this.timeout);
-    this.isUnmounted = true;
-  };
+    _proto.componentWillUnmount = function componentWillUnmount() {
+      clearTimeout(this.timeout);
+      this.isUnmounted = true;
+    };
 
-  _proto.safeSetState = function safeSetState(state, cb) {
-    var _this3 = this;
+    _proto.safeSetState = function safeSetState(state, cb) {
+      var _this3 = this;
 
-    if (this.isUnmounted) return;
-    this.setState(state, function () {
-      return !_this3.isUnmounted && cb();
-    });
-  } // This might be a public API.
-  ;
+      if (this.isUnmounted) return;
+      this.setState(state, function () {
+        return !_this3.isUnmounted && cb();
+      });
+    } // This might be a public API.
+      ;
 
-  _proto.pause = function pause() {
-    this._isPaused = true;
-    clearInterval(this._interval);
-    this._interval = null;
-  };
+    _proto.pause = function pause() {
+      this._isPaused = true;
+      clearInterval(this._interval);
+      this._interval = null;
+    };
 
-  _proto.cycle = function cycle() {
-    this._isPaused = false;
-    clearInterval(this._interval);
-    this._interval = null;
+    _proto.cycle = async function cycle() {
+      this._isPaused = false;
+      clearInterval(this._interval);
+      this._interval = null;
 
-    if (this.props.interval && !this._isPaused) {
-      this._interval = setInterval(document.visibilityState ? this.handleNextWhenVisible : this.handleNext, this.props.interval);
-    }
-  };
+      if (this.props.interval && !this._isPaused) {
+        // await setTimeout(function () { }, Math.floor(Math.random() * (4 - 2 + 1)) + 2);
+        this._interval = setInterval(document.visibilityState ? this.handleNextWhenVisible : this.handleNext, this.props.interval);
+      }
+    };
 
-  _proto.to = function to(index, event) {
-    var children = this.props.children;
+    _proto.to = function to(index, event) {
+      var children = this.props.children;
 
-    if (index < 0 || index > countChildren(children) - 1) {
-      return;
-    }
+      if (index < 0 || index > countChildren(children) - 1) {
+        return;
+      }
 
-    if (this._isSliding) {
-      this._pendingIndex = index;
-      return;
-    }
+      if (this._isSliding) {
+        this._pendingIndex = index;
+        return;
+      }
 
-    this.select(index, event);
-  };
+      this.select(index, event);
+    };
 
-  _proto.select = function select(index, event, direction) {
-    var _this4 = this;
+    _proto.select = function select(index, event, direction) {
+      var _this4 = this;
 
-    clearTimeout(this.selectThrottle);
-    if (event && event.persist) event.persist(); // The timeout throttles fast clicks, in order to give any pending state
-    // a chance to update and propagate back through props
+      clearTimeout(this.selectThrottle);
+      if (event && event.persist) event.persist(); // The timeout throttles fast clicks, in order to give any pending state
+      // a chance to update and propagate back through props
 
-    this.selectThrottle = setTimeout(function () {
-      clearTimeout(_this4.timeout);
-      var _this4$props = _this4.props,
+      this.selectThrottle = setTimeout(function () {
+        clearTimeout(_this4.timeout);
+        var _this4$props = _this4.props,
           activeIndex = _this4$props.activeIndex,
           onSelect = _this4$props.onSelect;
-      if (index === activeIndex || _this4._isSliding || _this4.isUnmounted) return;
-      onSelect(index, direction || (index < activeIndex ? 'prev' : 'next'), event);
-    }, 50);
-  };
+        if (index === activeIndex || _this4._isSliding || _this4.isUnmounted) return;
+        onSelect(index, direction || (index < activeIndex ? 'prev' : 'next'), event);
+      }, 50);
+    };
 
-  _proto.renderControls = function renderControls(properties) {
-    var bsPrefix = this.props.bsPrefix;
-    var wrap = properties.wrap,
+    _proto.renderControls = function renderControls(properties) {
+      var bsPrefix = this.props.bsPrefix;
+      var wrap = properties.wrap,
         children = properties.children,
         activeIndex = properties.activeIndex,
         prevIcon = properties.prevIcon,
         nextIcon = properties.nextIcon,
         prevLabel = properties.prevLabel,
         nextLabel = properties.nextLabel;
-    var count = countChildren(children);
-    return [(wrap || activeIndex !== 0) && _react.default.createElement(_SafeAnchor.default, {
-      key: "prev",
-      className: bsPrefix + "-control-prev",
-      onClick: this.handlePrev
-    }, prevIcon, prevLabel && _react.default.createElement("span", {
-      className: "sr-only"
-    }, prevLabel)), (wrap || activeIndex !== count - 1) && _react.default.createElement(_SafeAnchor.default, {
-      key: "next",
-      className: bsPrefix + "-control-next",
-      onClick: this.handleNext
-    }, nextIcon, nextLabel && _react.default.createElement("span", {
-      className: "sr-only"
-    }, nextLabel))];
-  };
+      var count = countChildren(children);
+      return [(wrap || activeIndex !== 0) && _react.default.createElement(_SafeAnchor.default, {
+        key: "prev",
+        className: bsPrefix + "-control-prev",
+        onClick: this.handlePrev
+      }, prevIcon, prevLabel && _react.default.createElement("span", {
+        className: "sr-only"
+      }, prevLabel)), (wrap || activeIndex !== count - 1) && _react.default.createElement(_SafeAnchor.default, {
+        key: "next",
+        className: bsPrefix + "-control-next",
+        onClick: this.handleNext
+      }, nextIcon, nextLabel && _react.default.createElement("span", {
+        className: "sr-only"
+      }, nextLabel))];
+    };
 
-  _proto.renderIndicators = function renderIndicators(children, activeIndex) {
-    var _this5 = this;
+    _proto.renderIndicators = function renderIndicators(children, activeIndex) {
+      var _this5 = this;
 
-    var bsPrefix = this.props.bsPrefix;
-    var indicators = [];
-    (0, _ElementChildren.forEach)(children, function (child, index) {
-      indicators.push(_react.default.createElement("li", {
-        key: index,
-        className: index === activeIndex ? 'active' : null,
-        onClick: function onClick(e) {
-          return _this5.to(index, e);
-        }
-      }), // Force whitespace between indicator elements. Bootstrap requires
-      // this for correct spacing of elements.
-      ' ');
-    });
-    return _react.default.createElement("ol", {
-      className: bsPrefix + "-indicators"
-    }, indicators);
-  };
+      var bsPrefix = this.props.bsPrefix;
+      var indicators = [];
+      (0, _ElementChildren.forEach)(children, function (child, index) {
+        indicators.push(_react.default.createElement("li", {
+          key: index,
+          className: index === activeIndex ? 'active' : null,
+          onClick: function onClick(e) {
+            return _this5.to(index, e);
+          }
+        }), // Force whitespace between indicator elements. Bootstrap requires
+          // this for correct spacing of elements.
+          ' ');
+      });
+      return _react.default.createElement("ol", {
+        className: bsPrefix + "-indicators"
+      }, indicators);
+    };
 
-  _proto.render = function render() {
-    var _this$props4 = this.props,
+    _proto.render = function render() {
+      var _this$props4 = this.props,
         bsPrefix = _this$props4.bsPrefix,
         slide = _this$props4.slide,
         fade = _this$props4.fade,
@@ -22953,40 +22968,40 @@ function (_React$Component) {
         _2 = _this$props4.onSelect,
         _1 = _this$props4.onSlideEnd,
         props = (0, _objectWithoutPropertiesLoose2.default)(_this$props4, ["bsPrefix", "slide", "fade", "indicators", "controls", "wrap", "prevIcon", "prevLabel", "nextIcon", "nextLabel", "className", "children", "keyboard", "activeIndex", "pauseOnHover", "interval", "onSelect", "onSlideEnd"]);
-    var _this$state2 = this.state,
+      var _this$state2 = this.state,
         activeIndex = _this$state2.activeIndex,
         previousActiveIndex = _this$state2.previousActiveIndex,
         prevClasses = _this$state2.prevClasses,
         currentClasses = _this$state2.currentClasses;
-    return (// eslint-disable-next-line jsx-a11y/no-static-element-interactions
-      _react.default.createElement("div", (0, _extends2.default)({}, props, {
-        className: (0, _classnames.default)(className, bsPrefix, slide && 'slide', fade && bsPrefix + "-fade"),
-        onKeyDown: keyboard ? this.handleKeyDown : undefined,
-        onMouseOver: this.handleMouseOver,
-        onMouseOut: this.handleMouseOut
-      }), indicators && this.renderIndicators(children, activeIndex), _react.default.createElement("div", {
-        className: bsPrefix + "-inner",
-        ref: this.carousel
-      }, (0, _ElementChildren.map)(children, function (child, index) {
-        var current = index === activeIndex;
-        var previous = index === previousActiveIndex;
-        return (0, _react.cloneElement)(child, {
-          className: (0, _classnames.default)(child.props.className, bsPrefix + "-item", current && currentClasses, previous && prevClasses)
-        });
-      })), controls && this.renderControls({
-        wrap: wrap,
-        children: children,
-        activeIndex: activeIndex,
-        prevIcon: prevIcon,
-        prevLabel: prevLabel,
-        nextIcon: nextIcon,
-        nextLabel: nextLabel
-      }))
-    );
-  };
+      return (// eslint-disable-next-line jsx-a11y/no-static-element-interactions
+        _react.default.createElement("div", (0, _extends2.default)({}, props, {
+          className: (0, _classnames.default)(className, bsPrefix, slide && 'slide', fade && bsPrefix + "-fade"),
+          onKeyDown: keyboard ? this.handleKeyDown : undefined,
+          onMouseOver: this.handleMouseOver,
+          onMouseOut: this.handleMouseOut
+        }), indicators && this.renderIndicators(children, activeIndex), _react.default.createElement("div", {
+          className: bsPrefix + "-inner",
+          ref: this.carousel
+        }, (0, _ElementChildren.map)(children, function (child, index) {
+          var current = index === activeIndex;
+          var previous = index === previousActiveIndex;
+          return (0, _react.cloneElement)(child, {
+            className: (0, _classnames.default)(child.props.className, bsPrefix + "-item", current && currentClasses, previous && prevClasses)
+          });
+        })), controls && this.renderControls({
+          wrap: wrap,
+          children: children,
+          activeIndex: activeIndex,
+          prevIcon: prevIcon,
+          prevLabel: prevLabel,
+          nextIcon: nextIcon,
+          nextLabel: nextLabel
+        }))
+      );
+    };
 
-  return Carousel;
-}(_react.default.Component);
+    return Carousel;
+  }(_react.default.Component);
 
 Carousel.defaultProps = defaultProps;
 var DecoratedCarousel = (0, _ThemeProvider.createBootstrapComponent)((0, _uncontrollable.default)(Carousel, {
@@ -32196,7 +32211,7 @@ var Home = function Home(props) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fkevinpena%2FDocuments%2FcomputerScience%2Fself%2Fkp-blog%2Ffrontend%2Fpages%2Findex.js ***!
   \******************************************************************************************************************************************************************/
@@ -32219,5 +32234,5 @@ module.exports = dll_01ce18af005e042d77da;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]));;
+},[[1,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map

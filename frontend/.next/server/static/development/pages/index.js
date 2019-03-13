@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -142,6 +142,11 @@ function _templateObject() {
 
 
 
+
+function randomNumber() {
+  return Math.floor(Math.random() * (7 - 5 + 1)) + 5;
+}
+
 var Styled = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div(_templateObject());
 
 var CarouselComp =
@@ -192,7 +197,7 @@ function (_Component) {
             key: i,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 221
+              lineNumber: 225
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
@@ -200,7 +205,7 @@ function (_Component) {
             src: images[i],
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 222
+              lineNumber: 226
             },
             __self: this
           })));
@@ -210,7 +215,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Styled, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 236
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -220,9 +225,10 @@ function (_Component) {
         pauseOnHover: true,
         fade: true,
         wrap: true,
+        interval: 5000,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 237
         },
         __self: this
       }, empty[0] && empty));
@@ -759,7 +765,7 @@ function (_Component) {
         }, data.posts.map(function (post, i) {
           return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
             key: i,
-            className: i % 3,
+            className: "row".concat(i % 3),
             __source: {
               fileName: _jsxFileName,
               lineNumber: 60
@@ -1119,7 +1125,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: white;\n  border: 1px solid ", ";\n  box-shadow: ", ";\n  position: relative;\n  display: flex;\n  flex-direction: column;\n\n  img {\n    width: 100%;\n    /* height: 400px; */\n    object-fit: contain;\n  }\n  p {\n    font-size: 12px;\n    line-height: 2;\n    font-weight: 300;\n    flex-grow: 1;\n    padding: 0 3rem;\n    font-size: 1.5rem;\n  }\n  .buttonList {\n    display: grid;\n    width: 100%;\n    border-top: 1px solid ", ";\n    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));\n    grid-gap: 1px;\n    background: ", ";\n    & > * {\n      background: white;\n      border: 0;\n      font-size: 1rem;\n      padding: 1rem;\n    }\n  }\n  .tags {\n    margin: 10px auto;\n    a {\n      padding: 5px;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: white;\n  border: 1px solid ", ";\n  box-shadow: ", ";\n  position: relative;\n  display: flex;\n  flex-direction: column;\n\n  div:nth-of-type(1) {\n    border-radius: 3px;\n    /* box-shadow: ", "; */\n  }\n\n\n  img {\n    width: 100%;\n    /* height: 400px; */\n    object-fit: contain;\n  }\n  p {\n    font-weight: lighter;\n    text-align: left;\n    font-size: 12px;\n    line-height: 2;\n    font-weight: 300;\n    flex-grow: 1;\n    padding: 0 3rem;\n    font-size: 1.5rem;\n  }\n  .buttonList {\n    display: grid;\n    width: 100%;\n    border-top: 1px solid ", ";\n    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));\n    grid-gap: 1px;\n    background: ", ";\n    & > * {\n      background: white;\n      border: 0;\n      font-size: 1rem;\n      padding: 1rem;\n    }\n  }\n  .tags {\n    margin: 10px 0px;\n    text-align: left;\n    padding: 0 3rem;\n    a {\n      margin: 0 5px;\n      padding: 5px;\n      /* background-color: ", "; */\n      color: ", ";\n      border-radius: 3px;\n    }\n  }\n\n  .carousel-inner {\n    max-height: 200px;\n  }\n  \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1134,9 +1140,15 @@ var Item = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templat
 }, function (props) {
   return props.theme.bs;
 }, function (props) {
+  return props.theme.bs;
+}, function (props) {
   return props.theme.lightgrey;
 }, function (props) {
   return props.theme.lightgrey;
+}, function (props) {
+  return props.theme.darkGrey;
+}, function (props) {
+  return props.theme.grey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Item);
 
@@ -1157,7 +1169,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin: 0 1rem;\n  text-align: center;\n  transform: skew(-5deg) rotate(-1deg);\n  margin-top: -3rem;\n  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);\n  a {\n    background: ", ";\n    display: inline;\n    line-height: 1.3;\n    font-size: 4rem;\n    text-align: center;\n    color: white;\n    padding: 0 1rem;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin: 0 1rem;\n  text-align: left;\n  /* transform: skew(-5deg) rotate(-1deg); */\n  /* margin-top: -3rem; */\n  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);\n  a {\n    /* background: ", "; */\n    display: inline;\n    line-height: 1.3;\n    font-size: 2rem;\n    text-align: center;\n    color: ", ";\n    padding: 0 1rem;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1169,6 +1181,8 @@ function _templateObject() {
 
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h3(_templateObject(), function (props) {
   return props.theme.grey;
+}, function (props) {
+  return props.theme.darkGrey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Title);
 
@@ -2642,7 +2656,7 @@ var Home = function Home(props) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
