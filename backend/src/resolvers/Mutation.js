@@ -168,7 +168,7 @@ const Mutation = {
         });
         // email them reset token
         const mailRes = await transport.sendMail({
-            from: 'wes@wesbos.com',
+            from: 'info@kevinpena.io',
             to: user.email,
             subject: 'Your Password Reset Token',
             html: makeNiceEmail(`Your Password Reset Token is here!

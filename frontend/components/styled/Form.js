@@ -24,7 +24,7 @@ const Form = styled.form`
     display: block;
     margin-bottom: 1rem;
   }
-  input,
+  * input,
   textarea,
   select {
     width: 100%;

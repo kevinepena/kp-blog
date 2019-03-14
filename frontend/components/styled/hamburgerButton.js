@@ -41,6 +41,7 @@ const BetterButton = styled.div`
   -o-transition: top 0.3s ease 0.3s, -o-transform 0.3s ease-out 0.1s;
   -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
   -webkit-transition-delay: 0.3s, 0.1s;
+  transition-delay: 0.3s, 0.1s;
   transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
   -moz-animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
   -webkit-animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
@@ -51,7 +52,7 @@ const BetterButton = styled.div`
   -moz-transition: ease 0.3s 0.3s;
   -o-transition: ease 0.3s 0.3s;
   -webkit-transition: ease 0.3s;
-  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
   transition: ease 0.3s 0.3s;
   -moz-animation: fade 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
   -webkit-animation: fade 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
@@ -63,6 +64,7 @@ const BetterButton = styled.div`
   -o-transition: top 0.3s ease 0.3s, -o-transform 0.3s ease-out 0.1s;
   -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
   -webkit-transition-delay: 0.3s, 0.1s;
+  transition-delay: 0.3s, 0.1s;
   transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
   -moz-animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
   -webkit-animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);

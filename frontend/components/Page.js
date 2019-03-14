@@ -60,11 +60,7 @@ const GlobalStyle = createGlobalStyle`
     }
     *
 {        
-    -webkit-user-select: none;
-    -moz-user-select: -moz-none;
-    /*IE10*/
-    -ms-user-select: none;
-    user-select: none;
+
 
     /*You just need this if you are only concerned with android and not desktop browsers.*/
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -151,6 +147,13 @@ const GlobalStyle = createGlobalStyle`
   animation-iteration-count: infinite;
 }
 
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  } to {
+    transform: translateY(-4px);
+  }
+}
 
     
 `;

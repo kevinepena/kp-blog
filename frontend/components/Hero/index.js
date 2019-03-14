@@ -28,7 +28,6 @@ const Paralax = styled.div`
 
     >div {
         background-color: rgba(50,50,50, .1);
-        border: 1px solid #3A3A3A;
         border-radius: 5px;
         }
 

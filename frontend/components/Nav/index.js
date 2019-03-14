@@ -83,16 +83,18 @@ button {
     &:after {
       width: calc(100% - 60px);
     }
-  @media (max-width: 700px) {
+    @media (max-width: 700px) {
       width: calc(100% - 10px);
-  }
+    }
   }
 }
 
 
 @media (max-width: 700px) {
+  background-image: url('https://res.cloudinary.com/kevinpena/image/upload/v1552575285/kpblog/euerlhrjlzaepuvkzcox.jpg');
   flex-direction: column;
   align-content: center;
+  background-size: cover;
   justify-content: center;
   /* position: relative; */
   position: absolute;
@@ -129,7 +131,9 @@ export default class Nav extends Component {
           mobile={this.props.mobile} 
           className={`${this.props.mobile && 'mobile'} ${this.props.open && 'open'}`}>
             <Link href={{ pathname: '/tag', query: { hash: 'work' } }}>
-            <a>Work</a>
+            <a
+            onClick={this.props.mobile && this.props.open}
+            >Work</a>
             </Link>
             <Link href={{ pathname: '/tag', query: { hash: 'lifestyle' } }}>
             <a>Lifestyle</a>

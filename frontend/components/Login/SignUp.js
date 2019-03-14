@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
+import Router from 'next/router';
 import gql from 'graphql-tag';
 import Form from '../styled/Form';
 import Error from '../ErrorMessage';
@@ -17,26 +18,32 @@ const SIGNUP_MUTATION = gql`
 
 class Signup extends Component {
 
+    constructor(props) {
+        super(props);
+        this.saveToState = this.saveToState.bind(this);
+    }
+
     state = {
         name: '',
         email: '',
         password: ''
     }
 
-    saveToState = e => {
+    saveToState(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
 
     render() {
         return (
-            <Mutation mutation={SIGNUP_MUTATION} variables={this.state} 
-            refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+            <Mutation mutation={SIGNUP_MUTATION} variables={this.state}
+                refetchQueries={[{ query: CURRENT_USER_QUERY }]}
             >
                 {(signup, { loading, error }) => (
                     <Form method="post" onSubmit={async (e) => {
                         e.preventDefault();
                         await signup();
-                        this.setState({ name: '', email: '', password: '' })
+                        this.setState({ name: '', email: '', password: '' });
+                        Router.push('/');
                     }}>
                         <fieldset disabled={loading} aria-busy={loading}>
                             <h2>Sign Up for an account</h2>

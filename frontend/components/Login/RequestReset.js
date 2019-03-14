@@ -14,11 +14,16 @@ const REQUEST_RESET_MUTATION = gql`
 
 class RequestReset extends Component {
 
+    constructor(props) {
+        super(props);
+        this.saveToState = this.saveToState.bind(this);
+    }
+
     state = {
         email: '',
     }
 
-    saveToState = e => {
+    saveToState(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
 

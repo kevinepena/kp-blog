@@ -1,5 +1,5 @@
-# source: https://kp-blog-prod-21a80be1f2.herokuapp.com/kpblog-backend-prod/dev
-# timestamp: Wed Mar 13 2019 15:31:59 GMT-0500 (Central Daylight Time)
+# source: https://us1.prisma.sh/kp-blog/backend/dev
+# timestamp: Wed Mar 13 2019 22:18:09 GMT-0500 (Central Daylight Time)
 
 type AggregatePost {
   count: Int!
@@ -464,6 +464,7 @@ input PostUpdateManyMutationInput {
 input PostUpdateManyWithoutTagsInput {
   create: [PostCreateWithoutTagsInput!]
   connect: [PostWhereUniqueInput!]
+  set: [PostWhereUniqueInput!]
   disconnect: [PostWhereUniqueInput!]
   delete: [PostWhereUniqueInput!]
   update: [PostUpdateWithWhereUniqueWithoutTagsInput!]
@@ -945,6 +946,7 @@ input TagUpdateManyMutationInput {
 input TagUpdateManyWithoutPostInput {
   create: [TagCreateWithoutPostInput!]
   connect: [TagWhereUniqueInput!]
+  set: [TagWhereUniqueInput!]
   disconnect: [TagWhereUniqueInput!]
   delete: [TagWhereUniqueInput!]
   update: [TagUpdateWithWhereUniqueWithoutPostInput!]

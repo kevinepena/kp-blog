@@ -22,12 +22,17 @@ class RequestReset extends Component {
         resetToken: Proptypes.string.isRequired
     }
 
+    constructor(props) {
+        super(props);
+        this.saveToState = this.saveToState.bind(this);
+    }
+
     state = {
         password: '',
         confirmPassword: ''
     }
 
-    saveToState = e => {
+    saveToState(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
 
@@ -59,7 +64,7 @@ class RequestReset extends Component {
                                 Confirm Password
                     <input type="password" name="confirmPassword" placeholder="Confirm Password" value={this.state.email} onChange={this.saveToState} />
                             </label>
-                            <button type="submit">Reset!</button>
+                            <button disabled type="submit">Reset!</button>
                         </fieldset>
                     </Form>
                 )}

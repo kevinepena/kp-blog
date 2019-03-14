@@ -152,7 +152,7 @@ class Header extends Component {
             //             className="count"
             //             classNames="count"
             //             timeout={{ enter: 400, exit: 400 }}>
-            <StyledHeader className="fadein" scroll={this.state.scroll} >
+            <StyledHeader scroll={this.state.scroll} >
                 <div className='bar'>
                     <Link href="/">
                         <KPLogo scroll={this.state.scroll} />

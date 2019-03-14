@@ -38,42 +38,50 @@ export default class Posts extends Component {
 
 
         return (
-            // <User>
-            //     {({ data: { me } }) => (
+            <User>
+                {({ data: { me } }) => (
 
 
-            <PostStyles>
-                <CarouselComp images={post.images} />
-                <Title>
-                    <Link href={{
-                        pathname: '/post',
-                        query: { id: post.id }
-                    }}>
-                        <a>{post.title}</a>
-                    </Link>
-                </Title>
-                <p>{post.description}</p>
-                <div className="tags">
-                    {arr[0] ? arr : 'Loading...'}
-                </div>
+                    <PostStyles>
+                        <CarouselComp images={post.images} />
+                        <Title>
+                            <Link href={{
+                                pathname: '/post',
+                                query: { id: post.id }
+                            }}>
+                                <a>{post.title}</a>
+                            </Link>
+                        </Title>
+                        <p>{post.description}</p>
+                        <div className="tags">
+                            {arr[0] ? arr : 'Loading...'}
+                        </div>
 
 
-                <div className="buttonList">
-                    <Link href={{
-                        pathname: '/update',
-                        query: { id: post.id }
-                    }}>
-                        <a>✏️</a>
-                    </Link>
-                    <DeletePost id={post.id}>
-                        ❌
+                        <div className="buttonList">
+                            {me && hasPermission(me, ['ADMIN']) && (
+                                <>
+                                    <Link href={{
+                                        pathname: '/update',
+                                        query: { id: post.id }
+                                    }}>
+                                        <a>✏️</a>
+                                    </Link>
+                                    <DeletePost id={post.id}>
+                                        ❌
                                     </DeletePost>
-                    <button>❤️</button>
-                    <button>Comment</button>
-                </div>
-            </PostStyles>
-            //     )}
-            // </User>
+                                </>
+                            )}
+                            {me && (
+                                <>
+                                    <button>❤️</button>
+                                    <button>Comment</button>
+                                </>
+                            )}
+                        </div>
+                    </PostStyles>
+                )}
+            </User>
         )
     }
 }
