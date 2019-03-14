@@ -22,20 +22,21 @@ const Follow = styled.div`
         line-height: 80px;
         font-size: 60px;
     }
-
-    /* transition: scale 1s; */
-
     svg:nth-of-type(1) {
+        width: 350px;
+        height: 200px;
         position: absolute;
         z-index: -1;
         animation: bounce 3.5s ease-in-out 2s infinite alternate;
         g {
-            transform: scale(3);
+                transform: scale(3);
             /* animation: growbig 1.5s; */
         }
     }
 
     svg:nth-of-type(2) {
+        width: 220px;
+        height: 200px;
         position: absolute;
         left: -50px;
         top: -19px;
@@ -47,15 +48,63 @@ const Follow = styled.div`
         }
     }
     svg:nth-of-type(3) {
+        width: 220px;
+        height: 200px;
         position: absolute;
-        right: -200px;
-        top: 80px;
+        /* right: -200px; */
+        top: 115px;
         z-index: -1;
         animation: bounce 4.5s ease-in-out 2s infinite alternate;
         g {
             transform: scale(2);
             /* animation: grow 1.5s; */
-            @keyframes grow {
+        }
+    }
+
+    @media(max-width: 500px) {
+    svg:nth-of-type(1) {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        z-index: -1;
+        left: 30px;
+        animation: bounce 3.5s ease-in-out 2s infinite alternate;
+        g {
+                transform: scale(1.8);
+            /* animation: growbig 1.5s; */
+        }
+    }
+
+    svg:nth-of-type(2) {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 0px;
+        top: -19px;
+        z-index: -2;
+        animation: bounce 2.5s ease-in-out 2s infinite alternate;
+        g {
+            transform: scale(.8);
+            /* animation: grow 1.5s ; */
+        }
+    }
+    svg:nth-of-type(3) {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 55px;
+    left: 215px;
+        z-index: -2;
+        animation: bounce 4.5s ease-in-out 2s infinite alternate;
+        g {
+            transform: scale(1);
+            /* animation: grow 1.5s; */
+        }
+    }
+}
+
+
+    @keyframes grow {
                 0% {
                     /* transform: translateY(-100%); */
                     opacity: 0;
@@ -67,22 +116,13 @@ const Follow = styled.div`
                     transform: scale(2);
                 }
             }
-        }
-    }
-
-
     @keyframes growbig {
         0% {
-      /* transform: translateY(-100%); */
-            opacity: 0;
             transform: scale(0);
-
-    }
-    100% {
-      /* transform: translateY(0); */
-      opacity: 1;
-      transform: scale(3);
-    }
+        }
+        100% {
+            transform: scale(3);
+        }
     }
 
 /* 
@@ -196,7 +236,7 @@ const Skew = styled.div`
 const Home = (props) => (
     <div style={{ paddingBottom: '50px' }}>
         <Follow className="fadein">
-            <svg height="200" width="350" id="cloud1">
+            <svg id="cloud1">
                 <g>
                     <polygon points="0,30 8,19 27,18 22,36 9,37" fill="#d5d6e2"></polygon>
                     <polygon points="0,30 9,37 3,50" fill="#c7c2d1"></polygon>
@@ -219,7 +259,7 @@ const Home = (props) => (
                     <polygon points="106,22 95,35 90,16" fill="#dbd6dd"></polygon>
                 </g>
             </svg>
-            <svg height="200" width="350" id="cloud1">
+            <svg  id="cloud1">
                 <g>
                     <polygon points="0,30 8,19 27,18 22,36 9,37" fill="#d5d6e2"></polygon>
                     <polygon points="0,30 9,37 3,50" fill="#c7c2d1"></polygon>
@@ -242,7 +282,7 @@ const Home = (props) => (
                     <polygon points="106,22 95,35 90,16" fill="#dbd6dd"></polygon>
                 </g>
             </svg>
-            <svg height="200" width="350" id="cloud1">
+            <svg  id="cloud1">
                 <g>
                     <polygon points="0,30 8,19 27,18 22,36 9,37" fill="#d5d6e2"></polygon>
                     <polygon points="0,30 9,37 3,50" fill="#c7c2d1"></polygon>
