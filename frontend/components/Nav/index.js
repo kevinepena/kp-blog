@@ -92,9 +92,13 @@ button {
 
 @media (max-width: 700px) {
   background-image: url('https://res.cloudinary.com/kevinpena/image/upload/v1552575285/kpblog/euerlhrjlzaepuvkzcox.jpg');
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  width: 100%;
+  justify-content: center;
   flex-direction: column;
   align-content: center;
-  background-size: cover;
   justify-content: center;
   /* position: relative; */
   position: absolute;
@@ -102,6 +106,7 @@ button {
   font-size: 10px;
   padding: 0 10px;
   box-shadow: 1px 1px 1px rgba(0,0,0, 0.4);
+  overflow: hidden;
 }
 
 @media(max-width: 900px) {
@@ -126,44 +131,47 @@ export default class Nav extends Component {
     return (
       <User>
         {({ data: { me } }) => (
-          <NavStyles  
-          scroll={this.props.scroll} 
-          mobile={this.props.mobile} 
-          className={`${this.props.mobile && 'mobile'} ${this.props.open && 'open'}`}>
-            <Link href={{ pathname: '/tag', query: { hash: 'work' } }}>
-            <a
-            onClick={this.props.mobile && this.props.open}
-            >Work</a>
-            </Link>
-            <Link href={{ pathname: '/tag', query: { hash: 'lifestyle' } }}>
-            <a>Lifestyle</a>
-            </Link>
-            <Link href={{ pathname: '/tag', query: { hash: 'travel' } }}>
-            <a>Travel</a>
-            </Link>
-            <Link href={{ pathname: '/tag', query: { hash: 'family' } }}>
-            <a>Family</a>
-            </Link>
-
-            {me && (
-              <>
-
-                {
-                  hasPermission(me, ['ADMIN']) ? <Link href="/createpost"><a>Post</a></Link> : ''
-                }
-                <SignOut />
-              </>
-            )}
-
-            {!me && (
-              <Link href='/login'>
-                <a>
-                  Login
-        </a>
+          <div >
+            <NavStyles
+              scroll={this.props.scroll}
+              onClick={this.props.closeMobile}
+              mobile={this.props.mobile}
+              className={`${this.props.mobile && 'mobile'} ${this.props.open && 'open'}`}>
+              <Link href={{ pathname: '/tag', query: { hash: 'work' } }}>
+                <a
+                  onClick={this.props.mobile && this.props.open}
+                >Work</a>
               </Link>
-            )}
+              <Link href={{ pathname: '/tag', query: { hash: 'lifestyle' } }}>
+                <a>Lifestyle</a>
+              </Link>
+              <Link href={{ pathname: '/tag', query: { hash: 'travel' } }}>
+                <a>Travel</a>
+              </Link>
+              <Link href={{ pathname: '/tag', query: { hash: 'family' } }}>
+                <a>Family</a>
+              </Link>
 
-          </NavStyles>
+              {me && (
+                <>
+
+                  {
+                    hasPermission(me, ['ADMIN']) ? <Link href="/createpost"><a>Post</a></Link> : ''
+                  }
+                  <SignOut />
+                </>
+              )}
+
+              {!me && (
+                <Link href='/login'>
+                  <a>
+                    Login
+        </a>
+                </Link>
+              )}
+
+            </NavStyles>
+          </div>
         )}
       </User>
     )

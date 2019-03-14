@@ -15,13 +15,14 @@ const BetterButton = styled.div`
   cursor: pointer;
 }
     .bar {
-  height: 5px;
+  height: 2px;
   width: 35px;
   display: block;
   margin: 10px auto;
   position: relative;
-  /* border: 1px solid ${props => props.theme.black}; */
-  background-color: rgba(235, 235, 235, 0.9);
+  border: 1px solid ${props => props.theme.grey};
+  /* background-color: rgba(235, 235, 235, 0.9); */
+  background-color: ${props => props.theme.lightGrey};
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -29,7 +30,7 @@ const BetterButton = styled.div`
   -o-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-bottom: 2px solid #494e52;
+  /* border-bottom: 2px solid #494e52; */
 }
 
  .bar {
@@ -72,6 +73,10 @@ const BetterButton = styled.div`
 }
 
 ${props => props.pushed ? `
+.bar{
+  border: none;
+  background-color: rgba(235, 235, 235, 0.9);
+}
  .bar:nth-of-type(1) {
   top: 30px;
   -moz-transform: rotate(45deg);

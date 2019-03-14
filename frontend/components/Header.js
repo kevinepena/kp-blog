@@ -141,7 +141,11 @@ class Header extends Component {
     }
 
     openMobile = () => {
-        this.setState({open: !this.state.open})
+        this.setState({ open: !this.state.open })
+    }
+
+    closeMobile = () => {
+        this.setState({ open: false })
     }
     render() {
         return (
@@ -157,13 +161,13 @@ class Header extends Component {
                     <Link href="/">
                         <KPLogo scroll={this.state.scroll} />
                     </Link>
-                {/* {this.state.mobile && <div className="navbtn"><button onClick={this.openMobile}>=</button></div>} */}
+                    {/* {this.state.mobile && <div className="navbtn"><button onClick={this.openMobile}>=</button></div>} */}
                     <div onClick={this.openMobile} className="navbtn"><Button open={this.state.open}>=</Button></div>
-                    <Nav 
-                    openMobile={this.openMobile} 
-                    open={this.state.open} 
-                    mobile={this.state.mobile} 
-                    scroll={this.state.scroll} />
+                    <Nav
+                        closeMobile={this.closeMobile}
+                        open={this.state.open}
+                        mobile={this.state.mobile}
+                        scroll={this.state.scroll} />
                 </div>
 
             </StyledHeader>
