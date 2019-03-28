@@ -125,7 +125,7 @@ class Header extends Component {
     }
 
     resize = (e) => {
-        if (e.path[0].screen.availWidth < 700) {
+        if (window.outerWidth < 700) {
             this.setState({ mobile: true })
         } else {
             this.setState({ mobile: false })
@@ -133,7 +133,7 @@ class Header extends Component {
     }
 
     scroll = (e) => {
-        if (e.path[1].scrollY > 75) {
+        if (window.pageYOffset > 75) {
             this.setState({ scroll: true })
         } else {
             this.setState({ scroll: false })
